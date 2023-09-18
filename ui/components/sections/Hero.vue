@@ -7,6 +7,7 @@
       show-arrows-on-hover
       draggable="true"
       hide-delimiter-background
+      interval="15000"
     >
       <v-carousel-item
         v-for="(carousel, carindex) in carouselsData"
