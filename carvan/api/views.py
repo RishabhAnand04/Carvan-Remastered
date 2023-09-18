@@ -53,13 +53,16 @@ class VisitingViewSet(viewsets.ModelViewSet):
     def get_queryset(self):
         queryset = Visiting.objects.all()
         my_type = self.request.query_params.get('type', None)
-
-        order_list = model()
+        city = self.request.query_params.get('city', None)
+        if city:
+            queryset = queryset.filter(city=Places.objects.get(name=city))
+            if city=="Chandigarh":
+                order_list = model()
+                queryset = sorted(queryset, key=lambda obj: order_list.index(obj.name))
+            return queryset
 
         if my_type is not None:
             queryset = queryset.filter(name=my_type)
-
-        queryset = sorted(queryset, key=lambda obj: order_list.index(obj.name))
 
         return queryset
 
