@@ -10,7 +10,7 @@
         "location": "Rajpath, New Delhi",
         "description": "India Gate is a war memorial and an iconic landmark of Delhi, dedicated to the soldiers who died in World War I.",
         "highlight": "Visit in the evening for the beautifully lit India Gate.",
-        "image_str": "india-gate.jpg",
+        "image_str": "India-Gate.jpg",
         "family_friendly": true
       },
       {
@@ -23,7 +23,7 @@
         "location": "Netaji Subhas Marg, Chandni Chowk, Delhi",
         "description": "Red Fort, also known as Lal Qila, is a UNESCO World Heritage Site and a symbol of India's rich history.",
         "highlight": "Explore the stunning architecture and historical significance.",
-        "image_str": "red-fort.jpg",
+        "image_str": "Red-Fort.jpg",
         "family_friendly": true
       },
       {
@@ -36,7 +36,7 @@
         "location": "Mehrauli, New Delhi",
         "description": "Qutub Minar is a UNESCO World Heritage Site and the tallest brick minaret in the world.",
         "highlight": "Climb to the top for panoramic views of Delhi.",
-        "image_str": "qutub-minar.jpg",
+        "image_str": "Qutub-Minar.jpg",
         "family_friendly": true
       },
       {
@@ -49,7 +49,7 @@
         "location": "Bahapur, New Delhi",
         "description": "Lotus Temple is a Bahá'í House of Worship known for its unique lotus-shaped architecture and serene ambiance.",
         "highlight": "Experience the tranquility of the temple's prayer hall.",
-        "image_str": "lotus-temple.jpg",
+        "image_str": "Lotus-Temple.jpg",
         "family_friendly": true
       },
       {
@@ -62,7 +62,7 @@
         "location": "Mathura Road, Nizamuddin, Delhi",
         "description": "Humayun's Tomb is a UNESCO World Heritage Site and the tomb of the Mughal Emperor Humayun.",
         "highlight": "Explore the beautiful Mughal architecture and lush gardens.",
-        "image_str": "humayuns-tomb.jpg",
+        "image_str": "Humayuns-Tomb.jpg",
         "family_friendly": true
       },
       {
@@ -75,7 +75,7 @@
         "location": "Noida Mor, New Delhi",
         "description": "Akshardham Temple is a stunning Hindu temple complex known for its intricate carvings and cultural exhibitions.",
         "highlight": "Attend the light and sound show in the evening.",
-        "image_str": "akshardham-temple.jpg",
+        "image_str": "Akshardham-Temple.jpg",
         "family_friendly": true
       },
       {
@@ -88,7 +88,7 @@
         "location": "Chandni Chowk, Delhi",
         "description": "Jama Masjid is one of the largest mosques in India, known for its stunning architecture and historical significance.",
         "highlight": "Climb the minaret for panoramic views of Old Delhi.",
-        "image_str": "jama-masjid.jpg",
+        "image_str": "Jama-Masjid.jpg",
         "family_friendly": true
       },
       {
@@ -101,7 +101,7 @@
         "location": "Connaught Place, New Delhi",
         "description": "Gurudwara Bangla Sahib is a prominent Sikh shrine known for its peaceful ambiance and community kitchen.",
         "highlight": "Participate in langar (community meal) at the gurudwara.",
-        "image_str": "gurudwara-bangla-sahib.jpg",
+        "image_str": "Gurudwara-Bangla-Sahib.jpg",
         "family_friendly": true
       },
       {
@@ -114,7 +114,7 @@
         "location": "Gandhi Smriti, Delhi",
         "description": "Raj Ghat is the memorial of Mahatma Gandhi, the Father of the Nation, where he was cremated.",
         "highlight": "Pay homage to Mahatma Gandhi at this solemn memorial.",
-        "image_str": "raj-ghat.jpg",
+        "image_str": "Raj-Ghat.jpg",
         "family_friendly": true
       },
       {
@@ -127,7 +127,7 @@
         "location": "Pragati Maidan, New Delhi",
         "description": "The National Handicrafts & Handlooms Museum showcases a rich collection of traditional Indian crafts and textiles.",
         "highlight": "Discover the diversity of Indian craftsmanship.",
-        "image_str": "handicrafts-museum.jpg",
+        "image_str": "Handicrafts-Museum.jpg",
         "family_friendly": true
       },
       {
@@ -140,7 +140,7 @@
         "location": "Chanakyapuri, New Delhi",
         "description": "The National Rail Museum is a fascinating museum dedicated to the history of railways in India.",
         "highlight": "Explore vintage locomotives and rail memorabilia.",
-        "image_str": "rail-museum.jpg",
+        "image_str": "Rail-Museum.jpg",
         "family_friendly": true
       },
       {
@@ -153,7 +153,7 @@
         "location": "INA, New Delhi",
         "description": "Dilli Haat is an open-air market offering handicrafts, art, and a variety of regional cuisines from across India.",
         "highlight": "Shop for unique handicrafts and savor diverse Indian cuisine.",
-        "image_str": "dilli-haat.jpg",
+        "image_str": "Dilli-Haat.jpg",
         "family_friendly": true
       },
       {
@@ -166,7 +166,7 @@
         "location": "Teen Murti Bhavan, New Delhi",
         "description": "Nehru Planetarium offers an immersive experience in astronomy and space science.",
         "highlight": "Attend planetarium shows for a cosmic journey.",
-        "image_str": "nehru-planetarium.jpg",
+        "image_str": "Nehru-Planetarium.jpg",
         "family_friendly": true
       },
       {
@@ -179,7 +179,7 @@
         "location": "Chhatarpur, New Delhi",
         "description": "Chhatarpur Temple is a beautiful Hindu temple complex known for its tranquility and intricate architecture.",
         "highlight": "Visit during morning prayers for a peaceful experience.",
-        "image_str": "chhatarpur-temple.jpg",
+        "image_str": "Chhatarpur-Temple.jpg",
         "family_friendly": true
       },
       {
@@ -192,7 +192,7 @@
         "location": "Nizamuddin West, New Delhi",
         "description": "Nizamuddin Dargah is a Sufi shrine known for its spiritual ambiance and qawwali music performances.",
         "highlight": "Experience Sufi music and the timeless atmosphere.",
-        "image_str": "nizamuddin-dargah.jpg",
+        "image_str": "Nizamuddin-Dargah.jpg",
         "family_friendly": true
       },
       {
@@ -205,7 +205,7 @@
         "location": "Mathura Road, New Delhi",
         "description": "The National Zoological Park houses a diverse collection of animals and is a great place for wildlife enthusiasts.",
         "highlight": "See endangered species and enjoy a day in nature.",
-        "image_str": "zoo.jpg",
+        "image_str": "Zoo.jpg",
         "family_friendly": true
       },
       {
@@ -218,7 +218,7 @@
         "location": "Anandagram, New Delhi",
         "description": "Sanskriti Kendra Museum showcases Indian art, culture, and heritage through exhibitions and artifacts.",
         "highlight": "Explore the diverse cultural heritage of India.",
-        "image_str": "sanskriti-kendra.jpg",
+        "image_str": "Sanskriti-Kendra.jpg",
         "family_friendly": true
       },
       {
@@ -231,7 +231,7 @@
         "location": "Pragati Maidan, New Delhi",
         "description": "Delhi Haunted House is a spooky attraction with haunted mazes and eerie experiences.",
         "highlight": "Brave the scares if you dare!",
-        "image_str": "haunted-house.jpg",
+        "image_str": "Haunted-House.jpg",
         "family_friendly": false
       },
       {
@@ -244,7 +244,7 @@
         "location": "Teen Murti Bhavan, New Delhi",
         "description": "Nehru Memorial Museum & Library is dedicated to India's first Prime Minister, Jawaharlal Nehru.",
         "highlight": "Learn about India's history and Nehru's legacy.",
-        "image_str": "nehru-museum.jpg",
+        "image_str": "Nehru-Museum.jpg",
         "family_friendly": true
       }
     ]
