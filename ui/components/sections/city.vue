@@ -2,7 +2,7 @@
     <section>
         <v-row no-gutters>
             <v-col cols="12">
-                <SectionsHeroAlt :hero-alt="heroAlt" />
+                <!-- <SectionsHeroAlt :hero-alt="heroAlt" /> -->
                 <v-container>
                     <v-row class="py-16">
                         <v-col cols="12">
@@ -15,7 +15,7 @@
                 <v-row no-gutters v-for="(place, index) in cityData" :key="place.id"
                     :class="{ 'flex-row-reverse': index % 2 === 1 }">
                     <v-col cols="12" md="6" align-self="center">
-                        <v-img max-height="500" src="sukhna-lake.jpg" lazy-src="sukhna-lake.jpg">
+                        <v-img max-height="500" :src="place.image_str" :lazy-src="place.image_str">
                         </v-img>
                     </v-col>
                     <v-col cols="12" md="6" align-self="center">
@@ -128,3 +128,6 @@ export default {
     },
 };
 </script>
+<style lang="scss" scoped>
+
+</style>

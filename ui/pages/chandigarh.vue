@@ -34,7 +34,7 @@ export default {
         },
         async getCityData() {
             try {
-                const response = await fetch(`http://127.0.0.1:8000/api/Visiting`);
+                const response = await fetch(`http://127.0.0.1:8000/api/Visiting/?city=Chandigarh`);
                 if (!response.ok) {
                     throw new Error("Network response was not ok");
                 }
