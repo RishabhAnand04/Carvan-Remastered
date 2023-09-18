@@ -1,0 +1,53 @@
+{
+  "SectionsBrands": {
+    "description": "Auto imported from components/sections/Brands.vue"
+  },
+  "SectionsCalloutBlock": {
+    "description": "Auto imported from components/sections/CalloutBlock.vue"
+  },
+  "SectionsFeatures": {
+    "description": "Auto imported from components/sections/Features.vue"
+  },
+  "SectionsHero": {
+    "description": "Auto imported from components/sections/Hero.vue"
+  },
+  "SectionsHeroAlt": {
+    "description": "Auto imported from components/sections/HeroAlt.vue"
+  },
+  "SectionsIntro": {
+    "description": "Auto imported from components/sections/Intro.vue"
+  },
+  "SectionsPricing": {
+    "description": "Auto imported from components/sections/Pricing.vue"
+  },
+  "SectionsTeam": {
+    "description": "Auto imported from components/sections/Team.vue"
+  },
+  "SectionsTestimonials": {
+    "description": "Auto imported from components/sections/Testimonials.vue"
+  },
+  "SectionsTimeline": {
+    "description": "Auto imported from components/sections/Timeline.vue"
+  },
+  "SectionsContactForm": {
+    "description": "Auto imported from components/sections/contactForm.vue"
+  },
+  "SectionsFooterContactForm": {
+    "description": "Auto imported from components/sections/footerContactForm.vue"
+  },
+  "Logo": {
+    "description": "Auto imported from components/Logo.vue"
+  },
+  "Notification": {
+    "description": "Auto imported from components/Notification.vue"
+  },
+  "FooterTop": {
+    "description": "Auto imported from components/footerTop.vue"
+  },
+  "SiteFooter": {
+    "description": "Auto imported from components/siteFooter.vue"
+  },
+  "SiteHeader": {
+    "description": "Auto imported from components/siteHeader.vue"
+  }
+}
