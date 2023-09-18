@@ -51,56 +51,58 @@ export default {
     return {
       heroAlt: [
         {
-          src: 'pexels-ekaterina-bolovtsova-4048767.jpg',
-          heading: ' Services ',
+          src: "pexels-ekaterina-bolovtsova-4048767.jpg",
+          heading: " Services ",
+          subHeading: "The most affordable pricing",
+          description: "lorem service",
         },
       ],
       cards: [
         {
-          title: 'Material Design',
-          text: 'Similique sunt in culpa qui officia deserunt mollitia animi, id est laborut dolorum fuga.harum quidem rerum facilis estexpedita distinctio.',
-          icon: 'mdi-material-design',
+          title: "Material Design",
+          text: "Similique sunt in culpa qui officia deserunt mollitia animi, id est laborut dolorum fuga.harum quidem rerum facilis estexpedita distinctio.",
+          icon: "mdi-material-design",
         },
         {
-          title: 'Powerful template',
-          text: 'Similique sunt in culpa qui officia deserunt mollitia animi, id est laborut dolorum fuga.harum quidem rerum facilis estexpedita distinctio.',
-          icon: 'mdi-desktop-mac',
+          title: "Powerful template",
+          text: "Similique sunt in culpa qui officia deserunt mollitia animi, id est laborut dolorum fuga.harum quidem rerum facilis estexpedita distinctio.",
+          icon: "mdi-desktop-mac",
         },
         {
-          title: 'Retina Ready',
-          text: 'Similique sunt in culpa qui officia deserunt mollitia animi, id est laborut dolorum fuga.harum quidem rerum facilis estexpedita distinctio.',
-          icon: 'mdi-eye',
+          title: "Retina Ready",
+          text: "Similique sunt in culpa qui officia deserunt mollitia animi, id est laborut dolorum fuga.harum quidem rerum facilis estexpedita distinctio.",
+          icon: "mdi-eye",
         },
         {
-          title: 'Fast Loading',
-          text: 'Similique sunt in culpa qui officia deserunt mollitia animi, id est laborut dolorum fuga.harum quidem rerum facilis estexpedita distinctio.',
-          icon: 'mdi-speedometer',
+          title: "Fast Loading",
+          text: "Similique sunt in culpa qui officia deserunt mollitia animi, id est laborut dolorum fuga.harum quidem rerum facilis estexpedita distinctio.",
+          icon: "mdi-speedometer",
         },
         {
-          title: 'Unlimited Colors',
-          text: 'Similique sunt in culpa qui officia deserunt mollitia animi, id est laborut dolorum fuga.harum quidem rerum facilis estexpedita distinctio.',
-          icon: 'mdi-infinity',
+          title: "Unlimited Colors",
+          text: "Similique sunt in culpa qui officia deserunt mollitia animi, id est laborut dolorum fuga.harum quidem rerum facilis estexpedita distinctio.",
+          icon: "mdi-infinity",
         },
         {
-          title: 'Premium Sliders',
-          text: 'Similique sunt in culpa qui officia deserunt mollitia animi, id est laborut dolorum fuga.harum quidem rerum facilis estexpedita distinctio.',
-          icon: 'mdi-slide',
+          title: "Premium Sliders",
+          text: "Similique sunt in culpa qui officia deserunt mollitia animi, id est laborut dolorum fuga.harum quidem rerum facilis estexpedita distinctio.",
+          icon: "mdi-slide",
         },
       ],
-    }
+    };
   },
   head() {
     return {
-      title: 'Services',
+      title: "Services",
       meta: [
         {
-          hid: 'description',
-          name: 'description',
+          hid: "description",
+          name: "description",
           content:
-            'Infographic hypotheses influencer user experience Long madel ture gen-z paradigm shift client partner network product seilans solve management influencer analytics leverage virality. incubator seed round massmarket. buyer agile development growth hacking business-to-consumer ecosystem',
+            "Infographic hypotheses influencer user experience Long madel ture gen-z paradigm shift client partner network product seilans solve management influencer analytics leverage virality. incubator seed round massmarket. buyer agile development growth hacking business-to-consumer ecosystem",
         },
       ],
-    }
+    };
   },
-}
+};
 </script>

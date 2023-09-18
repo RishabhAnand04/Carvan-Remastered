@@ -110,7 +110,7 @@
 </template>
 
 <script>
-import contactForm from '~/components/sections/contactForm.vue'
+import contactForm from "~/components/sections/contactForm.vue";
 export default {
   components: {
     contactForm,
@@ -119,26 +119,28 @@ export default {
     return {
       heroAlt: [
         {
-          src: 'pexels-andrea-piacquadio-3830745.jpg',
-          heading: ' Contact Us ',
+          src: "pexels-andrea-piacquadio-3830745.jpg",
+          heading: " Contact Us ",
+          subHeading: "The most affordable pricing",
+          description: "lorem contact",
         },
       ],
-    }
+    };
   },
   head() {
     return {
-      title: 'Contact Us',
+      title: "Contact Us",
       meta: [
         {
-          hid: 'description',
-          name: 'description',
+          hid: "description",
+          name: "description",
           content:
-            'Infographic hypotheses influencer user experience Long madel ture gen-z paradigm shift client partner network product seilans solve management influencer analytics leverage virality. incubator seed round massmarket. buyer agile development growth hacking business-to-consumer ecosystem',
+            "Infographic hypotheses influencer user experience Long madel ture gen-z paradigm shift client partner network product seilans solve management influencer analytics leverage virality. incubator seed round massmarket. buyer agile development growth hacking business-to-consumer ecosystem",
         },
       ],
-    }
+    };
   },
-}
+};
 </script>
 
 <style scoped>

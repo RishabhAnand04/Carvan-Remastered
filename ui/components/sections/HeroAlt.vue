@@ -20,13 +20,11 @@
             <h2
               class="text-h4 text-md-h3 text-center font-weight-black text-capitalize mb-4 mt-5"
             >
-              The most affordable pricing
+              {{ item.subHeading }}
             </h2>
 
             <p class="my-2 title">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-              nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-              erat volutpat.
+              {{ item.description }}
             </p>
           </v-col>
         </v-row>

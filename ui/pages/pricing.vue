@@ -17,24 +17,26 @@ export default {
     return {
       heroAlt: [
         {
-          src: 'pexels-andrea-piacquadio-3884440.jpg',
-          heading: ' Pricing ',
+          src: "pexels-andrea-piacquadio-3884440.jpg",
+          heading: " Pricing ",
+          subHeading: "The most affordable pricing",
+          description: "lorem pricing",
         },
       ],
-    }
+    };
   },
   head() {
     return {
-      title: 'Pricing and Plans',
+      title: "Pricing and Plans",
       meta: [
         {
-          hid: 'description',
-          name: 'description',
+          hid: "description",
+          name: "description",
           content:
-            'Infographic hypotheses influencer user experience Long madel ture gen-z paradigm shift client partner network product seilans solve management influencer analytics leverage virality. incubator seed round massmarket. buyer agile development growth hacking business-to-consumer ecosystem',
+            "Infographic hypotheses influencer user experience Long madel ture gen-z paradigm shift client partner network product seilans solve management influencer analytics leverage virality. incubator seed round massmarket. buyer agile development growth hacking business-to-consumer ecosystem",
         },
       ],
-    }
+    };
   },
-}
+};
 </script>

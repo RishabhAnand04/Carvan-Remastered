@@ -22,18 +22,22 @@
               {{ carousel.heading.toUpperCase() }}
             </div>
             <p class="mb-5 white--text">{{ carousel.subHeading }}</p>
-            <v-btn :x-large="$vuetify.breakpoint.smAndUp" class="my-3 primary"
-              >Get Started</v-btn
-            >
-            <span class="mx-2 my-4"></span>
-            <v-btn
+            <v-combobox
               :x-large="$vuetify.breakpoint.smAndUp"
-              text
-              class="my-3"
               outlined
               dark
-              ><v-icon left large color="primary">mdi-play</v-icon>Learn
-              More</v-btn
+              label="Search Destination"
+              :items="[
+                'Chandigarh',
+                'Shimla',
+                'Manali',
+                'Amritsar',
+                'Kasauli',
+                'Dharamshala',
+              ]"
+            ></v-combobox>
+            <v-btn :x-large="$vuetify.breakpoint.smAndUp" class="my-3 primary"
+              >Go</v-btn
             >
           </div>
         </v-container>
@@ -48,33 +52,33 @@ export default {
     return {
       carouselsData: [
         {
-          src: 'carousel4.jpg',
-          heading: 'Explore Exotic Destinations',
+          src: "carousel4.jpg",
+          heading: "Explore Exotic Destinations",
           subHeading:
             "Embark on a Journey of Discovery and Uncover the World's Hidden Treasures",
         },
         {
-          src: 'carousel3.jpg',
-          heading: 'Plan Your Dream Vacation',
+          src: "carousel3.jpg",
+          heading: "Plan Your Dream Vacation",
           subHeading:
-            'Let Our Experts Turn Your Dream Vacation Into a Seamless, Unforgettable Reality',
+            "Let Our Experts Turn Your Dream Vacation Into a Seamless, Unforgettable Reality",
         },
         {
-          src: 'carousel2.jpg',
-          heading: 'Discover Local Culture',
+          src: "carousel2.jpg",
+          heading: "Discover Local Culture",
           subHeading:
-            'Immerse Yourself in Authentic Experiences, From Culinary Delights to Meeting Locals',
+            "Immerse Yourself in Authentic Experiences, From Culinary Delights to Meeting Locals",
         },
         {
-          src: 'carousel1.jpg',
-          heading: 'Adventure of a Lifetime',
+          src: "carousel1.jpg",
+          heading: "Adventure of a Lifetime",
           subHeading:
             "Get Ready for Unforgettable Thrills and Explore Nature's Wonders in the Most Thrilling Expeditions",
         },
       ],
-    }
+    };
   },
-}
+};
 </script>
 
 <style>

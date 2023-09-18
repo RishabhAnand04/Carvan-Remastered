@@ -173,92 +173,94 @@ export default {
     return {
       heroAlt: [
         {
-          src: 'pexels-andrea-piacquadio-3884440.jpg',
-          heading: ' Blog ',
+          src: "pexels-andrea-piacquadio-3884440.jpg",
+          heading: " Blog ",
+          subHeading: "The most affordable pricing",
+          description: "lorem blog",
         },
       ],
       posts: [
         {
-          id: '',
-          title: 'Hello World',
-          postImage: '',
-          publishedOn: '',
-          lastUpdated: '',
-          author: '',
-          tags: '',
-          category: '',
-          excerpt: '',
-          content: '',
+          id: "",
+          title: "Hello World",
+          postImage: "",
+          publishedOn: "",
+          lastUpdated: "",
+          author: "",
+          tags: "",
+          category: "",
+          excerpt: "",
+          content: "",
         },
       ],
       page: 2,
       tags: [
-        'Work',
-        'Home Improvement',
-        'Vacation',
-        'Food',
-        'Drawers',
-        'Shopping',
-        'Art',
-        'Tech',
-        'Creative Writing',
+        "Work",
+        "Home Improvement",
+        "Vacation",
+        "Food",
+        "Drawers",
+        "Shopping",
+        "Art",
+        "Tech",
+        "Creative Writing",
       ],
       items: [
-        { text: 'Technology' },
-        { text: 'Health' },
-        { text: 'News' },
-        { text: 'Recent Discovery' },
-        { text: 'Lifestyle and Fitness' },
-        { text: 'Fashion' },
-        { text: 'Music' },
+        { text: "Technology" },
+        { text: "Health" },
+        { text: "News" },
+        { text: "Recent Discovery" },
+        { text: "Lifestyle and Fitness" },
+        { text: "Fashion" },
+        { text: "Music" },
       ],
       comments: [
         {
-          avatar: 'https://cdn.vuetifyjs.com/images/lists/1.jpg',
-          title: 'Ali Connors',
+          avatar: "https://cdn.vuetifyjs.com/images/lists/1.jpg",
+          title: "Ali Connors",
           subtitle: `I'll be in your neighborhood doing errands this weekend. Do you want to hang out?`,
         },
         { divider: true, inset: true },
         {
-          avatar: 'https://cdn.vuetifyjs.com/images/lists/2.jpg',
-          title: 'Alex Scott',
+          avatar: "https://cdn.vuetifyjs.com/images/lists/2.jpg",
+          title: "Alex Scott",
           subtitle: `Wish I could come, but I'm out of town this weekend.`,
         },
         { divider: true, inset: true },
         {
-          avatar: 'https://cdn.vuetifyjs.com/images/lists/3.jpg',
-          title: 'Sandra Adams',
-          subtitle: 'Do you have Paris recommendations? Have you ever been?',
+          avatar: "https://cdn.vuetifyjs.com/images/lists/3.jpg",
+          title: "Sandra Adams",
+          subtitle: "Do you have Paris recommendations? Have you ever been?",
         },
         { divider: true, inset: true },
         {
-          avatar: 'https://cdn.vuetifyjs.com/images/lists/4.jpg',
-          title: 'Trevor Hansen',
+          avatar: "https://cdn.vuetifyjs.com/images/lists/4.jpg",
+          title: "Trevor Hansen",
           subtitle:
-            'Have any ideas about what we should get Heidi for her birthday?',
+            "Have any ideas about what we should get Heidi for her birthday?",
         },
         { divider: true, inset: true },
         {
-          avatar: 'https://cdn.vuetifyjs.com/images/lists/5.jpg',
-          title: 'Britta Holt',
+          avatar: "https://cdn.vuetifyjs.com/images/lists/5.jpg",
+          title: "Britta Holt",
           subtitle:
-            'We should eat this: Grate, Squash, Corn, and tomatillo Tacos.',
+            "We should eat this: Grate, Squash, Corn, and tomatillo Tacos.",
         },
       ],
-    }
+    };
   },
   head() {
     return {
-      title: 'Blog',
+      title: "Blog",
       meta: [
         {
-          hid: 'description',
-          name: 'description',
+          hid: "description",
+          name: "description",
           content:
-            'Infographic hypotheses influencer user experience Long madel ture gen-z paradigm shift client partner network product seilans solve management influencer analytics leverage virality. incubator seed round massmarket. buyer agile development growth hacking business-to-consumer ecosystem',
+            "Infographic hypotheses influencer user experience Long madel ture gen-z paradigm shift client partner network product seilans solve management influencer analytics leverage virality. incubator seed round massmarket. buyer agile development growth hacking business-to-consumer ecosystem",
         },
       ],
-    }
+    };
   },
-}
+};
 </script>
