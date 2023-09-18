@@ -3,7 +3,12 @@
     <v-container>
       <v-responsive class="max-auto mx-auto text-center" max-width="600">
         <v-avatar color="primary" size="70" class="mb-8">
-          <v-icon x-large dark>mdi-web</v-icon>
+          <lord-icon
+            src="https://cdn.lordicon.com/fihkmkwt.json"
+            trigger="hover"
+            colors="primary:#121331,secondary:#4bb3fd"
+            style="width: 250px; height: 250px"
+          ></lord-icon>
         </v-avatar>
         <h2 class="text-h4 text-md-h3 text-center font-weight-black mb-7">
           Unlock Your Journey: Explore, Experience, Evolve
@@ -11,7 +16,8 @@
         <p class="title font-weight-light">
           Explore our curated destinations and activities to turn your travel
           <strong> dreams into reality</strong>
-          . We're here to create unforgettable experiences that will stay with you for a
+          . We're here to create unforgettable experiences that will stay with
+          you for a
           <strong>lifetime</strong>.
         </p>
       </v-responsive>
@@ -22,12 +28,20 @@
             <v-col :cols="card.callout ? 9 : 12">
               <div class="pr-2">
                 <div class="text--disabled" v-text="card.subtitle"></div>
-                <h4 class="text-uppercase mt-1 mb-4" style="letter-spacing: 0.15em" v-text="card.title"></h4>
+                <h4
+                  class="text-uppercase mt-1 mb-4"
+                  style="letter-spacing: 0.15em"
+                  v-text="card.title"
+                ></h4>
                 <p v-text="card.text"></p>
               </div>
             </v-col>
             <v-col v-if="card.callout" cols="2">
-              <span class="text-h3 grey--text font-weight-bold pr-8" style="opacity: 0.1">{{ card.callout }}</span>
+              <span
+                class="text-h3 grey--text font-weight-bold pr-8"
+                style="opacity: 0.1"
+                >{{ card.callout }}</span
+              >
             </v-col>
           </v-row>
         </v-col>
@@ -38,6 +52,7 @@
 
 <script>
 export default {
+  components: {},
   data() {
     return {
       cards: [

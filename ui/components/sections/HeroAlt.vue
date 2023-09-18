@@ -4,7 +4,7 @@
       v-for="(item, i) in heroAlt"
       :key="i"
       width="100%"
-      height="30vh"
+      height="80vh"
       :src="item.src"
       class="gradient-fill"
       dark
@@ -17,6 +17,17 @@
             >
               {{ item.heading.toUpperCase() }}
             </h1>
+            <h2
+              class="text-h4 text-md-h3 text-center font-weight-black text-capitalize mb-4 mt-5"
+            >
+              The most affordable pricing
+            </h2>
+
+            <p class="my-2 title">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+              nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+              erat volutpat.
+            </p>
           </v-col>
         </v-row>
       </v-container>
@@ -32,7 +43,7 @@ export default {
       default: () => [],
     },
   },
-}
+};
 </script>
 
 <style>
