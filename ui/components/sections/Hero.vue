@@ -47,9 +47,12 @@
 </template>
 
 <script>
+import axios from 'axios';
 export default {
   data() {
     return {
+      placesData: null,
+      error: null, 
       carouselsData: [
         {
           src: "carousel4.jpg",
@@ -77,6 +80,15 @@ export default {
         },
       ],
     };
+  },
+  mounted() {
+    axios.get('http://127.0.0.1:8000/api/Places/')
+      .then(response => {
+        this.placesData = response.data;
+      })
+      .catch(error => {
+        this.error = error.message;
+      });
   },
 };
 </script>

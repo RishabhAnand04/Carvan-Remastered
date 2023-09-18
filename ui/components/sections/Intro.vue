@@ -3,12 +3,6 @@
     <v-container>
       <v-responsive class="max-auto mx-auto text-center" max-width="600">
         <v-avatar color="primary" size="70" class="mb-8">
-          <lord-icon
-            src="https://cdn.lordicon.com/fihkmkwt.json"
-            trigger="hover"
-            colors="primary:#121331,secondary:#4bb3fd"
-            style="width: 250px; height: 250px"
-          ></lord-icon>
         </v-avatar>
         <h2 class="text-h4 text-md-h3 text-center font-weight-black mb-7">
           Unlock Your Journey: Explore, Experience, Evolve
