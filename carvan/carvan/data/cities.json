@@ -2,6 +2,7 @@
     "places": [
         {
             "name": "Chandigarh",
+            "sub_heading":"subheading1",
             "type": "City",
             "rating": 4.5,
             "description": "Chandigarh is a modern city and the capital of two Indian states, Punjab and Haryana. It is known for its well-planned architecture and beautiful gardens."
@@ -34,6 +35,13 @@
             "name": "Dharamshala",
             "type": "Hill Station",
             "rating": 4.3,
+            "description": "Dharamshala is a picturesque hill station in Himachal Pradesh, known for being the residence of the Dalai Lama and its Tibetan culture."
+        },
+        {
+            "name": "Delhi",
+            "sub_heading":"subheading2",
+            "type": "City",
+            "rating": 5,
             "description": "Dharamshala is a picturesque hill station in Himachal Pradesh, known for being the residence of the Dalai Lama and its Tibetan culture."
         }
     ]

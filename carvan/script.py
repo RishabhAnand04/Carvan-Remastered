@@ -18,18 +18,18 @@ def manual_post():
         data = json.load(file)
     for d in data["places"]:
         a = Visiting.objects.update_or_create(
-            city = Places.objects.first(),
-            name = d["name"],
-                                rating = d["rating"],
-                                visits_per_month =d["visits_per_month"],
-                                ticket_price=d["ticket_price"],
-                                hours_open =d["hours_open"],
-                                accessibility_range=d["accessibility_range"],
-                                location=d["location"],
-                                description=d["description"],
-                                highlight =d["highlight"],
-                                family_friendly =d["family_friendly"],
-                                image_str = d.get("image_str","a"),
-                                ) 
+            city = Places.objects.get(name ="Chandigarh"),
+            **d
+        )
+
+def manual_post_delhi():
+    with open(BASE_DIR/"carvan"/"data"/"delhi.json", 'r') as file:
+        data = json.load(file)
+    for d in data["places"]:
+        a = Visiting.objects.update_or_create(
+            city = Places.objects.get(name ="Delhi"),
+            **d
+        )
 
 manual_post()
+manual_post_delhi()

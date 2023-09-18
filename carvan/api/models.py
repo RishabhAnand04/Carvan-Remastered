@@ -1,7 +1,8 @@
 from django.db import models
 
 class Places(models.Model):
-    name = models.CharField(max_length=200)
+    name = models.CharField(max_length=200, unique=True)
+    sub_heading = models.CharField(max_length=200, default="")
     type = models.CharField(max_length=200)
     rating = models.IntegerField(null=True)
     imgage = models.ImageField(null=True)
