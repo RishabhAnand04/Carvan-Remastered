@@ -52,7 +52,7 @@ export default {
   data() {
     return {
       placesData: null,
-      error: null, 
+      error: null,
       carouselsData: [
         {
           src: "carousel4.jpg",
@@ -80,6 +80,18 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    fetchPlaces() {
+      fetch("http://127.0.0.1:8000/api/")
+        .then((res) => res.json())
+        .then((places) => {
+          console.log(places);
+        });
+    },
+  },
+  mounted() {
+    this.fetchPlaces();
   },
 };
 </script>
