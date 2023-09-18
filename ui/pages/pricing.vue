@@ -18,9 +18,9 @@ export default {
       heroAlt: [
         {
           src: "pexels-andrea-piacquadio-3884440.jpg",
-          heading: " Pricing ",
-          subHeading: "The most affordable pricing",
-          description: "lorem pricing",
+          heading: " Packages and Deals ",
+          subHeading: "The Best in Travel: Packages and Exclusive Deals Await",
+          description: "Experience the epitome of wanderlust with our handpicked travel packages and exclusive deals. From exotic getaways to thrilling adventures, embark on unforgettable journeys tailored just for you. Your dream vacation is just a click away.",
         },
       ],
     };

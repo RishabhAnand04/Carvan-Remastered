@@ -47,8 +47,8 @@ export default {
         {
           src: "pexels-andrea-piacquadio-3830745.jpg",
           heading: " Gallery ",
-          subHeading: "The most affordable pricing",
-          description: "lorem gallery",
+          subHeading: "Visual Odyssey: Discover Our Travel Memories",
+          description: "Embark on a visual odyssey through our curated travel memories. Immerse yourself in breathtaking landscapes, vibrant cultures, and unforgettable moments captured in every frame. Join us on a journey of exploration and inspiration as we share the world through our lens.",
         },
       ],
     };
