@@ -1,3 +1,4 @@
+from typing import Any
 from django.shortcuts import render
 from .models import Places,Visiting
 from .serializers import PlacesDataSerializer,VisitingDataSerializer
@@ -16,6 +17,11 @@ import numpy as np
 import tensorflow as tf
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
+import nltk
+from nltk.chat.util import Chat, reflections
+import requests
+from bs4 import BeautifulSoup
+from urllib.parse import quote
 
 
 # Create your views here.
@@ -141,3 +147,114 @@ def model():
         result.append(place_name)
     
     return result
+
+
+
+def get_weather(city):
+    try:
+        # Prepare the Google Weather URL
+        url = f'https://www.google.com/search?q=weather+in+{city}'
+
+        # Send a GET request to Google
+        response = requests.get(url)
+
+        # Parse the HTML content
+        soup = BeautifulSoup(response.text, 'html.parser')
+
+        # Extract the temperature and weather description
+        temperature = soup.find('div', {'class': 'BNeawe iBp4i AP7Wnd'}).text
+        description = soup.find('div', {'class': 'BNeawe tAd8D AP7Wnd'}).text
+
+        return f"The weather in {city} right now: {temperature}, {description}."
+    except Exception as e:
+        return f"Sorry, I couldn't fetch the weather information for {city}. Please try again later."
+
+
+# List of recommendations
+recommendations = [
+    'Le Corbusier Center', 'Butterfly Park', 'Chandigarh Golf Club', 'Capitol Complex',
+    'International Dolls Museum', 'FunCity Water Park', 'Government Museum and Art Gallery',
+    'Terraced Garden', 'Terrace Garden', 'Rock Garden', 'Chandigarh Botanical Garden and Nature Park',
+    'Chhatbir Zoo', 'Gurudwara Nada Sahib', 'Cactus Garden', 'Leisure Valley', 'Elante Mall',
+    'Rose Garden', 'Sukhna Lake'
+]
+
+# Define a set of rules for the chatbot
+
+
+# Create a chatbot using the rules and reflections
+# chatbot = Chat(rules, reflections)
+
+# # Start the chat
+# print("Chatbot: Hello! How can I assist you today?")
+# while True:
+#     user_input = input("You: ")
+#     if user_input.lower() == 'quit':
+#         break
+#     response = chatbot.respond(user_input)
+#     # Combine the responses into a single string
+#     chatbot_response = ''.join(response)
+#     print("Chatbot:", chatbot_response)
+
+class ChatBot(APIView):
+    def __init__(self):
+        rules = [
+        (r'hello|hi|hey', ['Hello!', 'Hi', 'Hey!']),
+        (r'how are you', ['I am fine, thank you!', 'I am doing well. How about you?']),
+        (r'(.*) your name', ['I am a chatbot.', 'I go by the name ChatGPT.']),
+        (r'(.) help (.)', ['I can help you with a variety of tasks. Please specify what you need help with.']),
+        (r'bye|goodbye', ['Goodbye!', 'See you later!', 'Have a great day!']),
+        (r'(tell me about|what can you tell me about) Chandigarh', [
+            "Sure, I can provide information about Chandigarh.",
+            "I'd be happy to tell you more about Chandigarh.",
+            "Here's some information about Chandigarh:",
+            "Chandigarh is a city in India that serves as the capital of two states, Haryana and Punjab. It is known for its well-planned architecture and is often referred to as 'The City Beautiful'.",
+            "You can find more detailed information on Chandigarh in this Wikipedia article: https://en.wikipedia.org/wiki/Chandigarh"
+        ]),
+        (r'(recommend|suggest) (.) (to|in) (.)', [self.recommend_location("chandigarh","chandigarh")]),
+        (r'(what is the weather like|tell me about the weather in) (.*) right now', [self.get_weather("chandigarh")]),
+        (r'(best time to visit|when is the ideal time to go to|when should I go to) (.*)', [
+            "The best time to visit chandigarh is usually Post-monsoon months, starting from September and lasting till November.",
+            "I'd recommend going to chandigarh Post-monsoon months, starting from September and lasting till November for the best experience."
+        ]),
+        (r'most famous cafe in (.*)', ["Garlic And Greens","Virgin Courtyard","Chilli & Pepper"]),
+        (r'most famous restaurant in (.*)', ["Old Pal Dhaba","Swagath Restaurant","Ghazal Restaurant"]),
+        (r'(.*)',['Sorry i am unable to solve your query please send us a detailed query at carvaan@gmail.com']),
+        (r'quit', ['Goodbye!', 'See you later!', 'Have a great day!']),
+        ]
+        self.rules = rules
+
+
+    def post(self,request):
+        request_data = request.GET.get('input', None)
+        chatbot = Chat(self.rules, reflections)
+        response = chatbot.respond(request_data)
+        chatbot_response = ''.join(response)
+        return Response({'response': chatbot_response})
+
+    def get_weather(self,city):
+        try:
+            # Prepare the Google Weather URL
+            url = f'https://www.google.com/search?q=weather+in+{city}'
+
+            # Send a GET request to Google
+            response = requests.get(url)
+
+            # Parse the HTML content
+            soup = BeautifulSoup(response.text, 'html.parser')
+
+            # Extract the temperature and weather description
+            temperature = soup.find('div', {'class': 'BNeawe iBp4i AP7Wnd'}).text
+            description = soup.find('div', {'class': 'BNeawe tAd8D AP7Wnd'}).text
+
+            return f"The weather in {city} right now: {temperature}, {description}."
+        except Exception as e:
+            return f"Sorry, I couldn't fetch the weather information for {city}. Please try again later."
+
+    def recommend_location(self,location, target_location):
+        if location.lower() == 'chandigarh' and target_location.lower() == 'chandigarh':
+            return f"I recommend {recommendations[0]} in {location}."
+        else:
+            return "I'm sorry, I can only recommend places in Chandigarh."
+
+
