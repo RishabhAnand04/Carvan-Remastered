@@ -19,4 +19,7 @@ from django.urls import path
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    # path('api/cud/', CreateUnderwritingData.as_view(), name='create_excel'),
+    # path("api/process_excel", ProcessExcel.as_view(), name='process_excel'),
+    # path("api/templates", QuestionTemplates.as_view(), name='templates')
 ]
