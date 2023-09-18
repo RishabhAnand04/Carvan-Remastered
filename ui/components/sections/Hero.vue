@@ -1,4 +1,60 @@
 <template>
+  <v-form>
+    <v-text-field label="Name" dense outlined></v-text-field>
+    <v-text-field label="Email" dense outlined></v-text-field>
+    <v-text-field label="Subject" dense outlined></v-text-field>
+    <v-textarea
+      dense
+      label="Your Message"
+      auto-grow
+      outlined
+      rows="8"
+      row-height="20"
+    ></v-textarea>
+    <v-btn @click="snackbar = true" outlined block color="primary"
+      >SEND MESSAGE</v-btn
+    >
+    <v-snackbar
+      v-model="snackbar"
+      :timeout="-1"
+      :dark="$vuetify.theme.dark"
+      :light="!$vuetify.theme.dark"
+    >
+      {{ text }}
+      <template v-slot:action="{ attrs }">
+        <v-btn
+          color="primary ml-3"
+          small
+          v-bind="attrs"
+          @click="snackbar = false"
+        >
+          Close
+        </v-btn>
+      </template>
+    </v-snackbar>
+  </v-form>
+</template>
+
+<script>
+export default {
+    data() {
+    return {
+      snackbar: false,
+      text: `Succesfully Sent`,
+    }
+  },
+  components: {
+  },
+  methods: {
+    refreshPage() {
+      window.location.reload();
+    },
+  },
+};
+</script>
+New
+7:23
+<template>
   <section id="hero">
     <v-carousel
       height="calc(100vh - 64px)"
@@ -48,28 +104,28 @@ export default {
     return {
       carouselsData: [
         {
-          src: 'pexels-andrea-piacquadio-3884440.jpg',
-          heading: ' PROMOTE YOUR BUSINESS WITH US ',
+          src: 'carousel4.jpg',
+          heading: 'Explore Exotic Destinations',
           subHeading:
-            'Infographic hypotheses influencer user experience Long madel ture gen-z paradigm shift client partner network product seilans solve management influencer analytics leverage virality. incubator seed round massmarket. buyer agile development growth hacking business-to-consumer ecosystem ',
+            "Embark on a Journey of Discovery and Uncover the World's Hidden Treasures",
         },
         {
-          src: 'pexels-peter-olexa-4012966.jpg',
-          heading: ' LOREM IPSUM DOLOR SIT AMET CONSEETU',
+          src: 'carousel3.jpg',
+          heading: 'Plan Your Dream Vacation',
           subHeading:
-            'Litora a interdum primis. Lectus facilisi sit cum arcu aliquam velit imperdiet sapien suspendisse at vel facilisis. Facilisis metus, curae; nibh mi orci et. Fringilla sociis magna rutrum bibendum arcu.',
+            'Let Our Experts Turn Your Dream Vacation Into a Seamless, Unforgettable Reality',
         },
         {
-          src: 'pexels-thirdman-5961072.jpg',
-          heading: ' Build your website with this Theme ',
+          src: 'carousel2.jpg',
+          heading: 'Discover Local Culture',
           subHeading:
-            'Tellus cum turpis natoque id justo interdum tincidunt faucibus aptent congue pellentesque. Proin luctus orci netus! Scelerisque parturient cursus donec parturient et, luctus aptent habitant aliquet felis. Sapien placerat ultricies.',
+            'Immerse Yourself in Authentic Experiences, From Culinary Delights to Meeting Locals',
         },
         {
-          src: 'pexels-andrea-piacquadio-3830745.jpg',
-          heading: ' URNA TINCIDUNT MATTIS TORTOR ',
+          src: 'carousel1.jpg',
+          heading: 'Adventure of a Lifetime',
           subHeading:
-            'Dapibus cras, ligula suspendisse potenti himenaeos mus volutpat pulvinar est facilisi. Vehicula malesuada parturient euismod litora mollis penatibus. Penatibus cum nullam facilisi enim nisi ac suspendisse. Ullamcorper ad amet netus.',
+            "Get Ready for Unforgettable Thrills and Explore Nature's Wonders in the Most Thrilling Expeditions",
         },
       ],
     }

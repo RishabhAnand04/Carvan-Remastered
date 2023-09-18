@@ -16,10 +16,7 @@
             </v-col>
             <v-col cols="12">
               <p class="mt-8 text-justify" style="max-width: 400px">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo
-                pariatur quidem, quis modi iure nihil commodi suscipit, corporis
-                dicta adipisci, voluptatum quia cupiditate. Nulla minus
-                voluptatum nostrum deleniti, asperiores facere.
+                Have questions or need assistance in planning your next adventure? Our team of travel experts is here to help. Reach out to us anytime, and we'll ensure your journey is nothing short of exceptional.
               </p>
             </v-col>
             <v-col cols="12">
@@ -32,7 +29,7 @@
                   <v-list-item-content>
                     <v-list-item-title>ADDRESS</v-list-item-title>
                     <v-list-item-subtitle
-                      >1400 Main Street, Orlando, FL 79938</v-list-item-subtitle
+                      >Himalya Hostel, Punjab Eng. College</v-list-item-subtitle
                     >
                   </v-list-item-content>
                 </v-list-item>
@@ -45,10 +42,10 @@
                   <v-list-item-content>
                     <v-list-item-title>EMAIL</v-list-item-title>
                     <v-list-item-subtitle
-                      >info@example.com</v-list-item-subtitle
+                      >sahiljaura@carvan.com</v-list-item-subtitle
                     >
                     <v-list-item-subtitle
-                      >support@example.com</v-list-item-subtitle
+                      >rishabhanand@carvan.com</v-list-item-subtitle
                     >
                   </v-list-item-content>
                 </v-list-item>
@@ -62,8 +59,8 @@
 
                   <v-list-item-content>
                     <v-list-item-title>PHONE</v-list-item-title>
-                    <v-list-item-subtitle>(323) 555-6789</v-list-item-subtitle>
-                    <v-list-item-subtitle>(650) 555-1234</v-list-item-subtitle>
+                    <v-list-item-subtitle>(+91) 94161-07222</v-list-item-subtitle>
+                    <v-list-item-subtitle>(650) 98231-23414</v-list-item-subtitle>
                   </v-list-item-content>
                 </v-list-item>
                 <v-divider></v-divider>
