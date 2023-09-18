@@ -97,37 +97,37 @@ export default {
           plan: 'Basic',
           elevation: 0,
           color: 'primary darken-1',
-          description: 'Best Plan for Small Businesses',
+          description: 'Ideal for students, backpackers, and those looking to explore on a budget.',
           monthly: '$10',
           yearly: '$100',
           features: [
             {
               icon: 'mdi-web',
-              text: '5 websites',
+              text: 'Accommodations',
             },
             {
               icon: 'mdi-harddisk',
-              text: '10 GB storage',
+              text: 'Transportation',
             },
             {
               icon: 'mdi-signal',
-              text: '500 GB bandwidth',
+              text: 'Essential Sightseeing',
             },
             {
               icon: 'mdi-account',
-              text: '10 email addreses',
+              text: 'Travel Assistance',
             },
             {
               icon: 'mdi-domain',
-              text: 'free domain with annual plan',
+              text: 'Group Activities',
             },
             {
               icon: 'mdi-server',
-              text: '4X pricessing power',
+              text: 'Travel Insurance',
             },
             {
               icon: 'mdi-dns',
-              text: 'premium DNS',
+              text: '24/7 Online Support',
             },
           ],
         },
@@ -135,37 +135,37 @@ export default {
           plan: 'Silver',
           elevation: 16,
           color: 'green darken-2',
-          description: 'Best Plan for Professional Users',
+          description: 'Great for families, couples, and solo adventurers',
           monthly: '$40',
           yearly: '$400',
           features: [
             {
               icon: 'mdi-web',
-              text: '5 websites',
+              text: 'Upgraded Accommodations',
             },
             {
               icon: 'mdi-harddisk',
-              text: '10 GB storage',
+              text: 'Transportation',
             },
             {
               icon: 'mdi-signal',
-              text: '500 GB bandwidth',
+              text: 'Comprehensive Sightseeing',
             },
             {
               icon: 'mdi-account',
-              text: '10 email addreses',
+              text: 'Enhanced Travel Assistance',
             },
             {
               icon: 'mdi-domain',
-              text: 'free domain with annual plan',
+              text: 'Additional Group Activities',
             },
             {
               icon: 'mdi-server',
-              text: '4X pricessing power',
+              text: 'Extended Travel Insurance',
             },
             {
               icon: 'mdi-dns',
-              text: 'premium DNS',
+              text: 'Local Guides',
             },
           ],
         },
@@ -173,37 +173,37 @@ export default {
           plan: 'Gold',
           elevation: 0,
           color: 'orange darken-3',
-          description: 'Best Plan for Power Users',
+          description: 'Suited for honeymooners, luxury seekers, and anyone desiring a truly bespoke journey.',
           monthly: '$100',
           yearly: '$1000',
           features: [
             {
               icon: 'mdi-web',
-              text: 'unlimited websites',
+              text: 'Luxury Accommodations',
             },
             {
               icon: 'mdi-harddisk',
-              text: 'unlimited storage',
+              text: 'Premium Transportation',
             },
             {
               icon: 'mdi-signal',
-              text: 'unlimited bandwidth',
+              text: 'Exclusive Sightseeing',
             },
             {
               icon: 'mdi-account',
-              text: 'unlimited addreses',
+              text: 'Concierge Services',
             },
             {
               icon: 'mdi-domain',
-              text: 'free domain with annual plan',
+              text: 'Customized Itinerary',
             },
             {
               icon: 'mdi-server',
-              text: '4X pricessing power',
+              text: 'Comprehensive Travel Insurance',
             },
             {
               icon: 'mdi-dns',
-              text: 'premium DNS',
+              text: 'Private Guides',
             },
           ],
         },
