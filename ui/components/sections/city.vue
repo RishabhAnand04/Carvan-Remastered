@@ -7,7 +7,7 @@
                     <v-row class="py-16">
                         <v-col cols="12">
                             <h2 class="text-h4 text-md-h3 text-center font-weight-black text-capitalize">
-                                Tourist Places to Visit in {{ cityName }}
+                                Tourist Places to Visit in {{ currentCityObj.name }}
                             </h2>
                         </v-col>
                     </v-row>
@@ -39,8 +39,8 @@
 <script>
 export default {
     props: {
-        cityData: Object,
-        cityName: String,
+        cityData: Array,
+        currentCityObj: String,
     },
     data() {
         return {
@@ -120,9 +120,6 @@ export default {
         };
     },
     computed: {
-        formattedCityData() {
-            return this.cityData.map((item) => { })
-        }
     },
     head() {
         return {

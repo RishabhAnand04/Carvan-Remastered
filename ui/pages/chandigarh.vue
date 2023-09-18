@@ -1,6 +1,6 @@
 <template>
     <div>
-        <SectionsCity :city-data="cityData" :city-name="Chandigarh"></SectionsCity>
+        <SectionsCity :city-data="cityData" :current-city-obj="currentCityObj"></SectionsCity>
     </div>
 </template>
 
@@ -8,11 +8,13 @@
 export default {
     data() {
         return {
+            name: 'Chandigarh',
             cityData: null,
-            currentCityData: {}, 
+            allPlaces: [], 
+            currentCityObj: {},
         };
     },
-    mounted() {
+    created() {
         this.getPlaces();
         this.getCityData();
     },
@@ -24,7 +26,8 @@ export default {
                     throw new Error('Network response was not ok');
                 }
                 const data = await response.json();
-                this.currentCityData = data;
+                this.allPlaces = data;
+                this.currentCityObj = this.allPlaces.find(city => city.name === 'Chandigarh');
             } catch (error) {
                 console.error('Error fetching places:', error);
             }
