@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "corsheaders",
+    'corsheaders',
     'api',
     'rest_framework',
 ]
@@ -127,7 +127,5 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:8080",
-    "http://localhost:8081"
-]
+# CORS_ALLOWED_ORIGINS =['*']
+ALLOWED_HOSTS=['*']
