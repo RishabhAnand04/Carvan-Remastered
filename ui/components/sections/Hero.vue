@@ -47,7 +47,6 @@
 </template>
 
 <script>
-import axios from 'axios';
 export default {
   data() {
     return {
@@ -80,15 +79,6 @@ export default {
         },
       ],
     };
-  },
-  mounted() {
-    axios.get('http://127.0.0.1:8000/api/Places/')
-      .then(response => {
-        this.placesData = response.data;
-      })
-      .catch(error => {
-        this.error = error.message;
-      });
   },
 };
 </script>
