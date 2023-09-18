@@ -40,7 +40,7 @@
 export default {
     props: {
         cityData: Array,
-        currentCityObj: String,
+        currentCityObj: Object,
     },
     data() {
         return {
