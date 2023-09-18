@@ -28,16 +28,10 @@
               outlined
               dark
               label="Search Destination"
-              :items="[
-                'Chandigarh',
-                'Shimla',
-                'Manali',
-                'Amritsar',
-                'Kasauli',
-                'Dharamshala',
-              ]"
+              v-model="placeToVisit"
+              :items="placesOutThere"
             ></v-combobox>
-            <v-btn :x-large="$vuetify.breakpoint.smAndUp" class="my-3 primary"
+            <v-btn :x-large="$vuetify.breakpoint.smAndUp" :to="placeToVisit" class="my-3 primary"
               >Go</v-btn
             >
           </div>
@@ -51,8 +45,8 @@
 export default {
   data() {
     return {
-      placesData: null,
-      error: null,
+      places: [],
+      placeToVisit: "",
       carouselsData: [
         {
           src: "carousel4.jpg",
@@ -81,17 +75,28 @@ export default {
       ],
     };
   },
+  computed:{
+    placesOutThere(){
+      return this.places.map(item => item.name);
+    },
+  },
   methods: {
-    fetchPlaces() {
-      fetch("http://127.0.0.1:8000/api/")
-        .then((res) => res.json())
-        .then((places) => {
-          console.log(places);
-        });
+    async getPlaces() {
+      try {
+        const response = await fetch('http://127.0.0.1:8000/api/Places');
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        this.places = data;
+        console.log(this.places); // You can do something with the data here
+      } catch (error) {
+        console.error('Error fetching places:', error);
+      }
     },
   },
   mounted() {
-    this.fetchPlaces();
+    this.getPlaces();
   },
 };
 </script>
