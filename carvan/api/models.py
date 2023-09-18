@@ -11,6 +11,7 @@ class Visiting(models.Model):
     name = models.CharField(max_length=200)
     city = models.ForeignKey(Places, max_length=200, on_delete = models.PROTECT)
     imgage = models.ImageField(null=True)
+    image_str = models.CharField(max_length=200, default="")
     rating = models.IntegerField(null=True)
     visits_per_month = models.IntegerField(null=True)
     ticket_price = models.IntegerField(null=True)

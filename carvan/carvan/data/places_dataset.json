@@ -10,6 +10,7 @@
       "location": "Sector 1, Chandigarh",
       "description": "Rock Garden is a unique sculpture garden made from recycled materials, featuring a maze of rock and metal art installations.",
       "highlight": "Explore the creative artwork of Nek Chand, the garden's creator.",
+      "image_str": "rock-garden.jpg",
       "family_friendly": true
     },
     {
@@ -22,6 +23,7 @@
       "location": "Sector 16, Chandigarh",
       "description": "Rose Garden, also known as Zakir Hussain Rose Garden, is a lush garden with over 50,000 rose bushes, making it one of Asia's largest rose gardens.",
       "highlight": "Visit during the annual Rose Festival for cultural performances.",
+      "image_str": "rose-garden.jpg",
       "family_friendly": true
     },
     {
@@ -34,6 +36,7 @@
       "location": "Sector 1, Chandigarh",
       "description": "Sukhna Lake is a man-made reservoir known for boating, picnics, and beautiful sunset views against the backdrop of the Shivalik Hills.",
       "highlight": "Enjoy a boat ride and stroll along the lake promenade.",
+      "image_str": "sukhna-lake.jpg",
       "family_friendly": true
     },
     {
@@ -46,6 +49,7 @@
       "location": "Sector 1, Chandigarh",
       "description": "The Capitol Complex is a UNESCO World Heritage Site designed by Le Corbusier, featuring government buildings with unique architecture.",
       "highlight": "Explore the architectural marvels of the High Court and Secretariat.",
+      "image_str": "capitol-complex.jpg",
       "family_friendly": false
     },
     {
@@ -58,6 +62,7 @@
       "location": "Sarangpur, Chandigarh",
       "description": "The Botanical Garden and Nature Park is a green oasis with diverse plant species, walking trails, and a butterfly park.",
       "highlight": "Discover the beauty of native and exotic plants.",
+      "image_str": "botanical-garden.jpg",
       "family_friendly": true
     },
     {
@@ -70,6 +75,7 @@
       "location": "Chandigarh",
       "description": "Leisure Valley is a series of interconnected gardens and parks, offering a peaceful escape from the city's hustle and bustle.",
       "highlight": "Take a leisurely stroll through the lush greenery.",
+      "image_str": "leisure-valley.jpg",
       "family_friendly": true
     },
     {
@@ -82,6 +88,7 @@
       "location": "Industrial Area Phase I, Chandigarh",
       "description": "Elante Mall is the largest shopping mall in Chandigarh, featuring a wide range of stores, restaurants, and entertainment options.",
       "highlight": "Shop for fashion, dine, and catch a movie at the mall.",
+      "image_str": "elante-mall.jpg",
       "family_friendly": true
     },
     {
@@ -94,6 +101,7 @@
       "location": "Sector 10, Chandigarh",
       "description": "The Government Museum and Art Gallery houses a rich collection of art, sculptures, and historical artifacts.",
       "highlight": "Explore the cultural heritage of Chandigarh.",
+      "image_str": "government-museum.jpg",
       "family_friendly": true
     },
     {
@@ -106,6 +114,7 @@
       "location": "Sector 33B, Chandigarh",
       "description": "Terraced Garden is known for its blooming flowers, vibrant musical fountain, and serene ambiance.",
       "highlight": "Attend the musical fountain show in the evening.",
+      "image_str": "terraced-garden.jpg",
       "family_friendly": true
     },
     {
@@ -118,6 +127,7 @@
       "location": "Panchkula, Chandigarh",
       "description": "Gurudwara Nada Sahib is a Sikh shrine with historical significance and beautiful architecture.",
       "highlight": "Experience the spiritual atmosphere of the gurudwara.",
+      "image_str": "gurudwara-nada-sahib.jpg",
       "family_friendly": true
     },
     {
@@ -130,6 +140,7 @@
       "location": "Zirakpur, Chandigarh",
       "description": "Chhatbir Zoo is a popular wildlife park known for its diverse animal species, including lions, tigers, and elephants.",
       "highlight": "Get up close with exotic animals in their natural habitats.",
+      "image_str": "chhatbir-zoo.jpg",
       "family_friendly": true
     },
     {
@@ -142,6 +153,7 @@
       "location": "Panchkula, Chandigarh",
       "description": "The Cactus Garden is a unique botanical garden with a vast collection of cacti and succulent plants from around the world.",
       "highlight": "Explore the fascinating world of desert plants.",
+      "image_str": "cactus-garden.jpg",
       "family_friendly": true
     },
     {
@@ -154,6 +166,7 @@
       "location": "Sector 33, Chandigarh",
       "description": "Terrace Garden is a beautifully landscaped garden with colorful flowerbeds and scenic views of the city skyline.",
       "highlight": "Enjoy a peaceful evening amidst nature's beauty.",
+      "image_str": "terrace-garden.jpg",
       "family_friendly": true
     },
     {
@@ -166,6 +179,7 @@
       "location": "Ramgarh, Chandigarh",
       "description": "FunCity Water Park is a popular water park with thrilling water rides, wave pools, and family-friendly attractions.",
       "highlight": "Have a splash-tastic day with friends and family.",
+      "image_str": "funcity-water-park.jpg",
       "family_friendly": true
     },
     {
@@ -178,6 +192,7 @@
       "location": "Sector 6, Chandigarh",
       "description": "Chandigarh Golf Club is a prestigious golf course known for its lush green fairways and challenging holes.",
       "highlight": "Tee off at one of the finest golf courses in the region.",
+      "image_str": "chandigarh-golf-club.jpg",
       "family_friendly": false
     },
     {
@@ -190,6 +205,7 @@
       "location": "Sector 19, Chandigarh",
       "description": "Le Corbusier Center is a museum dedicated to the works and life of the renowned architect Le Corbusier.",
       "highlight": "Explore architectural exhibits and learn about Chandigarh's design.",
+      "image_str": "le-corbusier-center.jpg",
       "family_friendly": true
     },
     {
@@ -202,6 +218,7 @@
       "location": "Sector 26, Chandigarh",
       "description": "Butterfly Park is a delightful park with colorful butterfly species, making it a great spot for nature enthusiasts.",
       "highlight": "Observe the mesmerizing world of butterflies.",
+      "image_str": "butterfly-park.jpg",
       "family_friendly": true
     },
     {
@@ -214,6 +231,7 @@
       "location": "Sector 23, Chandigarh",
       "description": "The International Dolls Museum features a vast collection of dolls from different countries, showcasing cultural diversity.",
       "highlight": "Discover unique dolls and traditions from around the world.",
+      "image_str": "international-dolls-museum.jpg",
       "family_friendly": true
     }
   ]

@@ -17,7 +17,7 @@ def manual_post():
     with open(BASE_DIR/"carvan"/"data"/"places_dataset.json", 'r') as file:
         data = json.load(file)
     for d in data["places"]:
-        a = Visiting.objects.get_or_create(
+        a = Visiting.objects.update_or_create(
             city = Places.objects.first(),
             name = d["name"],
                                 rating = d["rating"],
@@ -29,6 +29,7 @@ def manual_post():
                                 description=d["description"],
                                 highlight =d["highlight"],
                                 family_friendly =d["family_friendly"],
+                                image_str = d.get("image_str","a"),
                                 ) 
 
 manual_post()
