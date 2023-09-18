@@ -2,50 +2,50 @@
   {
     "name": "about",
     "path": "/about",
-    "component": "/Users/rishabhanand/Desktop/Carvan-Remastered/UI/pages/about.vue",
+    "component": "C:\\\\Users\\\\anshu\\\\Documents\\\\Carvan-Remastered\\\\ui\\\\pages\\\\about.vue",
     "chunkName": "pages/about",
-    "_name": "_793d7a62"
+    "_name": "_d4d34132"
   },
   {
     "name": "blog",
     "path": "/blog",
-    "component": "/Users/rishabhanand/Desktop/Carvan-Remastered/UI/pages/blog.vue",
+    "component": "C:\\\\Users\\\\anshu\\\\Documents\\\\Carvan-Remastered\\\\ui\\\\pages\\\\blog.vue",
     "chunkName": "pages/blog",
-    "_name": "_b0d98e60"
+    "_name": "_327c2938"
   },
   {
     "name": "contact",
     "path": "/contact",
-    "component": "/Users/rishabhanand/Desktop/Carvan-Remastered/UI/pages/contact.vue",
+    "component": "C:\\\\Users\\\\anshu\\\\Documents\\\\Carvan-Remastered\\\\ui\\\\pages\\\\contact.vue",
     "chunkName": "pages/contact",
-    "_name": "_72989f62"
+    "_name": "_e80e140c"
   },
   {
     "name": "gallery",
     "path": "/gallery",
-    "component": "/Users/rishabhanand/Desktop/Carvan-Remastered/UI/pages/gallery.vue",
+    "component": "C:\\\\Users\\\\anshu\\\\Documents\\\\Carvan-Remastered\\\\ui\\\\pages\\\\gallery.vue",
     "chunkName": "pages/gallery",
-    "_name": "_1fe5ecd8"
+    "_name": "_096d602c"
   },
   {
     "name": "pricing",
     "path": "/pricing",
-    "component": "/Users/rishabhanand/Desktop/Carvan-Remastered/UI/pages/pricing.vue",
+    "component": "C:\\\\Users\\\\anshu\\\\Documents\\\\Carvan-Remastered\\\\ui\\\\pages\\\\pricing.vue",
     "chunkName": "pages/pricing",
-    "_name": "_65f04ff0"
+    "_name": "_332fa2c0"
   },
   {
     "name": "services",
     "path": "/services",
-    "component": "/Users/rishabhanand/Desktop/Carvan-Remastered/UI/pages/services.vue",
+    "component": "C:\\\\Users\\\\anshu\\\\Documents\\\\Carvan-Remastered\\\\ui\\\\pages\\\\services.vue",
     "chunkName": "pages/services",
-    "_name": "_a51cbee8"
+    "_name": "_7fc7c618"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "/Users/rishabhanand/Desktop/Carvan-Remastered/UI/pages/index.vue",
+    "component": "C:\\\\Users\\\\anshu\\\\Documents\\\\Carvan-Remastered\\\\ui\\\\pages\\\\index.vue",
     "chunkName": "pages/index",
-    "_name": "_39cdc4d8"
+    "_name": "_95638ba8"
   }
 ]

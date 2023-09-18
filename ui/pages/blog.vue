@@ -22,7 +22,7 @@
                 <v-img
                   class="white--text align-end"
                   height="200px"
-                  src="pexels-moose-photos-1036641.jpg"
+                  src="https://images.unsplash.com/photo-1622260614927-208cfe3f5cfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
                 >
                 </v-img>
                 <v-card-subtitle class="pb-0">
@@ -37,13 +37,10 @@
                   class="title font-weight-bold mt-3 pb-0 text--primary"
                   style="line-height: 1.8rem"
                 >
-                  Check out the new mansion we got for our eSports team!
+                  Hiking Essentials: Your Must-Have Gear Guide
                 </v-card-text>
                 <v-card-text class="text--primary">
-                  An online streamer, also known as a live streamer, internet
-                  streamer, or streamer, is a person who broadcasts themself
-                  online through a live stream or pre-recorded video. The scope
-                  of online streamers has grown to includ...
+                  Embarking on a hiking adventure? Don't hit the trail without the essentials. In this guide, we'll walk you through the must-have...
                   <v-btn href="#" small text color="primary">Read More</v-btn>
                 </v-card-text>
 
@@ -175,8 +172,8 @@ export default {
         {
           src: "pexels-andrea-piacquadio-3884440.jpg",
           heading: " Blog ",
-          subHeading: "The most affordable pricing",
-          description: "lorem blog",
+          subHeading: "Travel Blog Hub",
+          description: "Discover a world of adventure in our Travel Blog Hub. Immerse yourself in captivating narratives, expert tips, and inspiring journeys. Whether you're a seasoned explorer or dreaming of your next trip, our collection of travel blogs has something for everyone. Join us on this virtual expedition and let the wanderlust begin!",
         },
       ],
       posts: [
@@ -195,20 +192,20 @@ export default {
       ],
       page: 2,
       tags: [
-        "Work",
-        "Home Improvement",
+        "BucketList",
+        "Hiking",
         "Vacation",
         "Food",
-        "Drawers",
+        "Solo Travel",
         "Shopping",
         "Art",
         "Tech",
-        "Creative Writing",
+        "Sustainable Travel",
       ],
       items: [
-        { text: "Technology" },
+        { text: "Road Trips" },
         { text: "Health" },
-        { text: "News" },
+        { text: "Food and Dining" },
         { text: "Recent Discovery" },
         { text: "Lifestyle and Fitness" },
         { text: "Fashion" },
@@ -217,32 +214,32 @@ export default {
       comments: [
         {
           avatar: "https://cdn.vuetifyjs.com/images/lists/1.jpg",
-          title: "Ali Connors",
+          title: "Ali Ahmed",
           subtitle: `I'll be in your neighborhood doing errands this weekend. Do you want to hang out?`,
         },
         { divider: true, inset: true },
         {
           avatar: "https://cdn.vuetifyjs.com/images/lists/2.jpg",
-          title: "Alex Scott",
+          title: "Anshul Singh",
           subtitle: `Wish I could come, but I'm out of town this weekend.`,
         },
         { divider: true, inset: true },
         {
           avatar: "https://cdn.vuetifyjs.com/images/lists/3.jpg",
-          title: "Sandra Adams",
+          title: "Sakshi Singla",
           subtitle: "Do you have Paris recommendations? Have you ever been?",
         },
         { divider: true, inset: true },
         {
           avatar: "https://cdn.vuetifyjs.com/images/lists/4.jpg",
-          title: "Trevor Hansen",
+          title: "Trivid Shah",
           subtitle:
             "Have any ideas about what we should get Heidi for her birthday?",
         },
         { divider: true, inset: true },
         {
           avatar: "https://cdn.vuetifyjs.com/images/lists/5.jpg",
-          title: "Britta Holt",
+          title: "Bhumi Seth",
           subtitle:
             "We should eat this: Grate, Squash, Corn, and tomatillo Tacos.",
         },

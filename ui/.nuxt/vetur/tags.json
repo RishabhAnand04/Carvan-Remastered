@@ -5,8 +5,14 @@
   "SectionsCalloutBlock": {
     "description": "Auto imported from components/sections/CalloutBlock.vue"
   },
+  "SectionsContactForm": {
+    "description": "Auto imported from components/sections/contactForm.vue"
+  },
   "SectionsFeatures": {
     "description": "Auto imported from components/sections/Features.vue"
+  },
+  "SectionsFooterContactForm": {
+    "description": "Auto imported from components/sections/footerContactForm.vue"
   },
   "SectionsHero": {
     "description": "Auto imported from components/sections/Hero.vue"
@@ -29,20 +35,14 @@
   "SectionsTimeline": {
     "description": "Auto imported from components/sections/Timeline.vue"
   },
-  "SectionsContactForm": {
-    "description": "Auto imported from components/sections/contactForm.vue"
-  },
-  "SectionsFooterContactForm": {
-    "description": "Auto imported from components/sections/footerContactForm.vue"
+  "FooterTop": {
+    "description": "Auto imported from components/footerTop.vue"
   },
   "Logo": {
     "description": "Auto imported from components/Logo.vue"
   },
   "Notification": {
     "description": "Auto imported from components/Notification.vue"
-  },
-  "FooterTop": {
-    "description": "Auto imported from components/footerTop.vue"
   },
   "SiteFooter": {
     "description": "Auto imported from components/siteFooter.vue"

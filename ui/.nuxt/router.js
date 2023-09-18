@@ -4,13 +4,13 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _793d7a62 = () => interopDefault(import('../pages/about.vue' /* webpackChunkName: "pages/about" */))
-const _b0d98e60 = () => interopDefault(import('../pages/blog.vue' /* webpackChunkName: "pages/blog" */))
-const _72989f62 = () => interopDefault(import('../pages/contact.vue' /* webpackChunkName: "pages/contact" */))
-const _1fe5ecd8 = () => interopDefault(import('../pages/gallery.vue' /* webpackChunkName: "pages/gallery" */))
-const _65f04ff0 = () => interopDefault(import('../pages/pricing.vue' /* webpackChunkName: "pages/pricing" */))
-const _a51cbee8 = () => interopDefault(import('../pages/services.vue' /* webpackChunkName: "pages/services" */))
-const _39cdc4d8 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
+const _d4d34132 = () => interopDefault(import('..\\pages\\about.vue' /* webpackChunkName: "pages/about" */))
+const _327c2938 = () => interopDefault(import('..\\pages\\blog.vue' /* webpackChunkName: "pages/blog" */))
+const _e80e140c = () => interopDefault(import('..\\pages\\contact.vue' /* webpackChunkName: "pages/contact" */))
+const _096d602c = () => interopDefault(import('..\\pages\\gallery.vue' /* webpackChunkName: "pages/gallery" */))
+const _332fa2c0 = () => interopDefault(import('..\\pages\\pricing.vue' /* webpackChunkName: "pages/pricing" */))
+const _7fc7c618 = () => interopDefault(import('..\\pages\\services.vue' /* webpackChunkName: "pages/services" */))
+const _95638ba8 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
 
@@ -25,31 +25,31 @@ export const routerOptions = {
 
   routes: [{
     path: "/about",
-    component: _793d7a62,
+    component: _d4d34132,
     name: "about"
   }, {
     path: "/blog",
-    component: _b0d98e60,
+    component: _327c2938,
     name: "blog"
   }, {
     path: "/contact",
-    component: _72989f62,
+    component: _e80e140c,
     name: "contact"
   }, {
     path: "/gallery",
-    component: _1fe5ecd8,
+    component: _096d602c,
     name: "gallery"
   }, {
     path: "/pricing",
-    component: _65f04ff0,
+    component: _332fa2c0,
     name: "pricing"
   }, {
     path: "/services",
-    component: _a51cbee8,
+    component: _7fc7c618,
     name: "services"
   }, {
     path: "/",
-    component: _39cdc4d8,
+    component: _95638ba8,
     name: "index"
   }],
 
