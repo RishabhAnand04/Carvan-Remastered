@@ -85,7 +85,7 @@ export default {
           post: 'SDE-1 Amadeus Labs',
           review: "I'm a seasoned traveler, and I must say, your website is a gem. It's not just about the destinations; it's about the passion and expertise you bring to the table. The local culture insights and adventure recommendations added a whole new layer of excitement to our trips. Truly exceptional!",
         },
-        {a
+        {
           avtar: 'person-7.jpg',
           name: 'Anshul Banwala',
           post: 'PM India',
