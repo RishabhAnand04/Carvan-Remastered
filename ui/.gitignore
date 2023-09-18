@@ -1,1 +1,3 @@
 /node_modules
+/.nuxt/index.js
+/.nuxt/router.js/.nuxt/routes.json
