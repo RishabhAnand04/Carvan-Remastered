@@ -62,7 +62,7 @@
         "location": "Mathura Road, Nizamuddin, Delhi",
         "description": "Humayun's Tomb is a UNESCO World Heritage Site and the tomb of the Mughal Emperor Humayun.",
         "highlight": "Explore the beautiful Mughal architecture and lush gardens.",
-        "image_str": "Humayuns-Tomb.jpg",
+        "image_str": "Humayun's-Tomb.jpg",
         "family_friendly": true
       },
       {
@@ -127,7 +127,7 @@
         "location": "Pragati Maidan, New Delhi",
         "description": "The National Handicrafts & Handlooms Museum showcases a rich collection of traditional Indian crafts and textiles.",
         "highlight": "Discover the diversity of Indian craftsmanship.",
-        "image_str": "Handicrafts-Museum.jpg",
+        "image_str": "National-Handicrafts-Museum.jpg",
         "family_friendly": true
       },
       {
@@ -140,7 +140,7 @@
         "location": "Chanakyapuri, New Delhi",
         "description": "The National Rail Museum is a fascinating museum dedicated to the history of railways in India.",
         "highlight": "Explore vintage locomotives and rail memorabilia.",
-        "image_str": "Rail-Museum.jpg",
+        "image_str": "National-Rail-Museum.jpg",
         "family_friendly": true
       },
       {
@@ -205,7 +205,7 @@
         "location": "Mathura Road, New Delhi",
         "description": "The National Zoological Park houses a diverse collection of animals and is a great place for wildlife enthusiasts.",
         "highlight": "See endangered species and enjoy a day in nature.",
-        "image_str": "Zoo.jpg",
+        "image_str": "National-Zoological-Park.jpg",
         "family_friendly": true
       },
       {
@@ -218,7 +218,7 @@
         "location": "Anandagram, New Delhi",
         "description": "Sanskriti Kendra Museum showcases Indian art, culture, and heritage through exhibitions and artifacts.",
         "highlight": "Explore the diverse cultural heritage of India.",
-        "image_str": "Sanskriti-Kendra.jpg",
+        "image_str": "Sanskriti-Kendra-Museum.jpg",
         "family_friendly": true
       },
       {
@@ -231,7 +231,7 @@
         "location": "Pragati Maidan, New Delhi",
         "description": "Delhi Haunted House is a spooky attraction with haunted mazes and eerie experiences.",
         "highlight": "Brave the scares if you dare!",
-        "image_str": "Haunted-House.jpg",
+        "image_str": "Delhi-Haunted-House.jpg",
         "family_friendly": false
       },
       {
@@ -244,7 +244,7 @@
         "location": "Teen Murti Bhavan, New Delhi",
         "description": "Nehru Memorial Museum & Library is dedicated to India's first Prime Minister, Jawaharlal Nehru.",
         "highlight": "Learn about India's history and Nehru's legacy.",
-        "image_str": "Nehru-Museum.jpg",
+        "image_str": "Nehru-Memorial-Museum-&-Library.jpg",
         "family_friendly": true
       }
     ]
