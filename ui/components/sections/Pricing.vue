@@ -5,17 +5,6 @@
         <v-col>
           <v-row no-gutters>
             <v-col class="text-center">
-              <h2
-                class="text-h4 text-md-h3 text-center font-weight-black text-capitalize mb-4"
-              >
-                The most affordable pricing
-              </h2>
-
-              <p class="my-10 title">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-                aliquam erat volutpat.
-              </p>
               <div class="text-center">
                 <v-btn-toggle
                   v-model="planDuration"
