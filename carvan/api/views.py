@@ -101,7 +101,7 @@ def login_view(request):
     if request.method == 'POST':
         email = request.POST.get('email')
         password = request.POST.get('password')
-        print("")
+        print("!!!!!!!!!!!!!!")
         user = authenticate(request, email=email, password=password)
         if user is not None:
             login(request, user)
@@ -174,6 +174,7 @@ from reportlab.lib.styles import getSampleStyleSheet
 from reportlab.graphics.shapes import Drawing
 from reportlab.lib.units import inch
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Image
+from django.http import HttpResponse, JsonResponse
 
 
 @method_decorator(csrf_exempt, name='dispatch')
@@ -235,7 +236,8 @@ class GenerateTicketPDF(View):
 
         # Rewind the buffer and create a response with the PDF
         buffer.seek(0)
-        response = FileResponse(buffer, as_attachment=True, filename='ticket.pdf')
+        response = HttpResponse(buffer, content_type='application/pdf')
+        response['Content-Disposition'] = 'attachment; filename=ticket.pdf'
         return response
 
     def get(self, request):
