@@ -206,16 +206,76 @@ def generate_qr_code_and_pdf(request):
     except Exception as e:
         return JsonResponse({"error": str(e)}, status=500)
 
+import qrcode
+from qrcode.constants import ERROR_CORRECT_L  # Import the constant
+from django.http import FileResponse, JsonResponse
+from django.views import View
+from django.utils.decorators import method_decorator
+from django.views.decorators.csrf import csrf_exempt
+from io import BytesIO
+from reportlab.lib.pagesizes import letter
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer
+from reportlab.lib.styles import getSampleStyleSheet
+from reportlab.graphics.shapes import Drawing
+from reportlab.lib.units import inch
 
+@method_decorator(csrf_exempt, name='dispatch')  # Disable CSRF protection for this view
+class GenerateTicketPDF(View):
+    def post(self, request):
+        # Fetch user details from the POST request data (customize as needed)
+        user_details = {
+            "Name": request.POST.get("Name"),
+            "Event": request.POST.get("Event"),
+            "Date": request.POST.get("Date"),
+            "Ticket ID": request.POST.get("TicketID"),
+        }
 
+        # Create a PDF document
+        buffer = BytesIO()
+        doc = SimpleDocTemplate(buffer, pagesize=letter)
 
+        # Define styles for the ticket content
+        styles = getSampleStyleSheet()
 
+        # Create a list to hold the content for the PDF
+        ticket_content = []
 
+        # Add a title to the ticket
+        ticket_content.append(Paragraph("Event Ticket", styles['Title']))
+        ticket_content.append(Spacer(1, 12))
 
+        # Add user details to the ticket
+        for key, value in user_details.items():
+            user_info = f"<b>{key}:</b> {value}"
+            ticket_content.append(Paragraph(user_info, styles['Normal']))
+            ticket_content.append(Spacer(1, 6))
 
+        # Create a drawing for a QR code
+        qr = qrcode.QRCode(
+            version=1,
+            error_correction=ERROR_CORRECT_L,  # Use the correct constant
+            box_size=10,
+            border=4,
+        )
+        qr.add_data("https://www.example.com/ticket")
+        qr.make(fit=True)
 
+        qr_drawing = Drawing(100, 100)
+        qr_drawing.add(qr)
 
+        # Add the QR code to the ticket content
+        ticket_content.append(qr_drawing)
 
+        # Build the PDF document
+        doc.build(ticket_content)
+
+        # Rewind the buffer and create a response with the PDF
+        buffer.seek(0)
+        response = FileResponse(buffer, as_attachment=True, filename='ticket.pdf')
+        return response
+
+    def get(self, request):
+        return JsonResponse({"message": "Use POST request to generate a ticket."})
 
 def get_weather(city):
     try:
