@@ -97,11 +97,12 @@ def signup(request):
 @api_view(['POST'])
 @csrf_exempt
 def login_view(request):
-    print("ansuuuuuuuuuul")
+    print("ansuuuuuuuuuul",request.user)
     if request.method == 'POST':
-        username = request.POST.get('username')
+        email = request.POST.get('email')
         password = request.POST.get('password')
-        user = authenticate(request, username=username, password=password)
+        print("")
+        user = authenticate(request, email=email, password=password)
         if user is not None:
             login(request, user)
             return JsonResponse({'message': 'Login successful'})
@@ -160,52 +161,6 @@ def model():
     
     return result
 
-
-@csrf_exempt
-@api_view(['POST'])
-def generate_qr_code_and_pdf(request):
-    try:
-        user = request.user
-        print(request.user)
-
-        # Create a new user object
-        # user = User.objects.create(name=name, email=email)
-
-        # Generate a unique filename for the PDF
-        pdf_filename = f"user_{user.id}.pdf"
-        pdf_path = os.path.join("media", pdf_filename)
-
-        # Create a QR code containing a link to the PDF
-        qr = qrcode.QRCode(
-            version=1,
-            error_correction=qrcode.constants.ERROR_CORRECT_L,
-            box_size=10,
-            border=4,
-        )
-        qr.add_data(request.build_absolute_uri(pdf_path))
-        qr.make(fit=True)
-
-        # Generate the QR code image
-        qr_img = qr.make_image(fill_color="black", back_color="white")
-
-        # Generate the PDF with user details
-        c = canvas.Canvas(pdf_path)
-        c.drawString(100, 700, f"Name: {name}")
-        c.drawString(100, 680, f"Email: {email}")
-        # Add more details as needed
-        c.save()
-
-        # Return the QR code image URL in the response
-        response_data = {
-            "message": "QR code and PDF generated successfully",
-            "qr_code_url": request.build_absolute_uri(pdf_path),
-        }
-
-        return JsonResponse(response_data)
-
-    except Exception as e:
-        return JsonResponse({"error": str(e)}, status=500)
-
 import qrcode
 from qrcode.constants import ERROR_CORRECT_L  # Import the constant
 from django.http import FileResponse, JsonResponse
@@ -218,8 +173,10 @@ from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer
 from reportlab.lib.styles import getSampleStyleSheet
 from reportlab.graphics.shapes import Drawing
 from reportlab.lib.units import inch
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Image
 
-@method_decorator(csrf_exempt, name='dispatch')  # Disable CSRF protection for this view
+
+@method_decorator(csrf_exempt, name='dispatch')
 class GenerateTicketPDF(View):
     def post(self, request):
         # Fetch user details from the POST request data (customize as needed)
@@ -250,21 +207,28 @@ class GenerateTicketPDF(View):
             ticket_content.append(Paragraph(user_info, styles['Normal']))
             ticket_content.append(Spacer(1, 6))
 
-        # Create a drawing for a QR code
+        # Generate a QR code as an image
         qr = qrcode.QRCode(
             version=1,
-            error_correction=ERROR_CORRECT_L,  # Use the correct constant
+            error_correction=ERROR_CORRECT_L,
             box_size=10,
             border=4,
         )
         qr.add_data("https://www.example.com/ticket")
         qr.make(fit=True)
 
-        qr_drawing = Drawing(100, 100)
-        qr_drawing.add(qr)
+        qr_image = qr.make_image(fill_color="black", back_color="white")
 
-        # Add the QR code to the ticket content
-        ticket_content.append(qr_drawing)
+        # Save the QR code image to a BytesIO buffer
+        qr_buffer = BytesIO()
+        qr_image.save(qr_buffer, format="PNG")
+        qr_buffer.seek(0)
+
+        # Create a ReportLab Image object from the QR code image
+        qr_img = Image(qr_buffer, width=100, height=100)
+
+        # Add the QR code image to the ticket content
+        ticket_content.append(qr_img)
 
         # Build the PDF document
         doc.build(ticket_content)
@@ -276,6 +240,8 @@ class GenerateTicketPDF(View):
 
     def get(self, request):
         return JsonResponse({"message": "Use POST request to generate a ticket."})
+
+
 
 def get_weather(city):
     try:
