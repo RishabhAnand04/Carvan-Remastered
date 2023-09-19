@@ -97,6 +97,11 @@ export default {
           title: 'Contact',
           to: '/contact',
         },
+        {
+          icon: 'mdi-login',
+          title: 'Login/Signup',
+          to: '/login',
+        },
       ],
     }
   },
