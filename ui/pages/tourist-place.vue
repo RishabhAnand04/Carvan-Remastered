@@ -178,7 +178,7 @@ export default {
     },
     head() {
         return {
-            title: "Blog",
+            title: this.currentPlaceData.heading,
             meta: [
                 {
                     hid: "description",

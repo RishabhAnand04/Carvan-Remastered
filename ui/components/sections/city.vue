@@ -152,7 +152,7 @@ export default {
 
     head() {
         return {
-            title: "About Us",
+            title: this.currentCityObj.name,
         };
     },
 };
