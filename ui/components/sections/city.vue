@@ -16,8 +16,12 @@
                 <v-row no-gutters v-for="(place, index) in cityData" :key="place.id"
                     :class="{ 'flex-row-reverse': index % 2 === 1 }">
                     <v-col cols="12" md="6" align-self="center">
-                        <v-img max-height="500" :src="place.image_str" :lazy-src="place.image_str">
-                        </v-img>
+                        <v-hover v-slot="{ hover }">
+                            <v-card :elevation="hover ? 24 : 16" 
+                                :class="hover ? 'zoom' : 'notzoom'" class="mx-auto transition-swing">
+                                <v-img max-height="500" :src="place.image_str" :lazy-src="place.image_str">
+                                </v-img>
+                            </v-card></v-hover>
                     </v-col>
                     <v-col cols="12" md="6" align-self="center">
                         <div class="px-8 py-2">
@@ -168,5 +172,12 @@ export default {
 
 .color-class-4 {
     color: rgb(220, 150, 46);
+}
+.zoom {
+  transform: scale(1.025) translate(0, -10px);
+  transition: transform 0.2s;
+}
+.notzoom {
+  transition: transform 0.2s;
 }
 </style>
