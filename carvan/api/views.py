@@ -177,15 +177,14 @@ from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Image
 from django.http import HttpResponse, JsonResponse
 
 
-@method_decorator(csrf_exempt, name='dispatch')
 class GenerateTicketPDF(View):
-    def post(self, request):
-        # Fetch user details from the POST request data (customize as needed)
+    def get(self, request):
+        # Example user details (you can fetch these from your database)
         user_details = {
-            "Name": request.POST.get("Name"),
-            "Event": request.POST.get("Event"),
-            "Date": request.POST.get("Date"),
-            "Ticket ID": request.POST.get("TicketID"),
+            "Name": "John Doe",
+            "Event": "Example Concert",
+            "Date": "2023-09-20",
+            "Ticket ID": "123456789",
         }
 
         # Create a PDF document
@@ -211,7 +210,7 @@ class GenerateTicketPDF(View):
         # Generate a QR code as an image
         qr = qrcode.QRCode(
             version=1,
-            error_correction=ERROR_CORRECT_L,
+            error_correction=qrcode.constants.ERROR_CORRECT_L,
             box_size=10,
             border=4,
         )
@@ -225,10 +224,8 @@ class GenerateTicketPDF(View):
         qr_image.save(qr_buffer, format="PNG")
         qr_buffer.seek(0)
 
-        # Create a ReportLab Image object from the QR code image
-        qr_img = Image(qr_buffer, width=100, height=100)
-
         # Add the QR code image to the ticket content
+        qr_img = Image(qr_buffer, width=100, height=100)
         ticket_content.append(qr_img)
 
         # Build the PDF document
@@ -236,13 +233,8 @@ class GenerateTicketPDF(View):
 
         # Rewind the buffer and create a response with the PDF
         buffer.seek(0)
-        response = HttpResponse(buffer, content_type='application/pdf')
-        response['Content-Disposition'] = 'attachment; filename=ticket.pdf'
+        response = FileResponse(buffer, as_attachment=True, filename='ticket.pdf')
         return response
-
-    def get(self, request):
-        return JsonResponse({"message": "Use POST request to generate a ticket."})
-
 
 
 def get_weather(city):
