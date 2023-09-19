@@ -1,6 +1,7 @@
 <template>
     <section>
-        <v-row no-gutters>
+        <v-skeleton-loader color="secondary" type="card-avatar" v-if="!cityData"></v-skeleton-loader>
+        <v-row no-gutters v-if="cityData">
             <v-col cols="12">
                 <!-- <SectionsHeroAlt :hero-alt="heroAlt" /> -->
                 <v-container>
@@ -20,13 +21,21 @@
                     </v-col>
                     <v-col cols="12" md="6" align-self="center">
                         <div class="px-8 py-2">
-                            <h2 class="text-h3 text-center font-weight-black">{{ place.name }}</h2>
-                            <h3 class="text-h5 text-uppercase font-weight-thin text-center my-8">
+                            <h2 @click="redirectToIndividualPage(place.name)" class="text-h3 text-center font-weight-black"
+                                :class="dynamicH2Class(index)">{{
+                                    place.name
+                                }}</h2>
+                            <h3 class="text-h5 text-uppercase font-weight-thin text-center my-8"
+                                :class="dynamicH3Class(index)">
                                 {{ place.location }}
                             </h3>
                             <p>
                                 {{ place.description }}
                             </p>
+                            <div :class="dynamicH2Class(index)"><strong>Rating -
+                                    {{ place.rating }}
+                                </strong>
+                            </div>
                         </div>
                     </v-col>
                 </v-row>
@@ -119,8 +128,24 @@ export default {
             ],
         };
     },
-    computed: {
+    methods: {
+        redirectToIndividualPage(placeName) {
+            this.$router.push('/tourist-place');
+            const selectedTouristPlace = this.cityData.find(place => place.name === placeName);
+            this.$router.push({ path: '/tourist-place', query: { data: JSON.stringify(selectedTouristPlace) } });
+        },
+        dynamicH2Class(index) {
+            const colors = ['color-class-1', 'color-class-2', 'color-class-3', 'color-class-4'];
+            const colorIndex = index % colors.length;
+            return colors[colorIndex];
+        },
+        dynamicH3Class(index) {
+            const colors = ['color-class-3', 'color-class-4', 'color-class-1', 'color-class-2'];
+            const colorIndex = index % colors.length;
+            return colors[colorIndex];
+        },
     },
+
     head() {
         return {
             title: "About Us",
@@ -129,5 +154,19 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+.color-class-1 {
+    color: brown;
+}
 
+.color-class-2 {
+    color: rgb(65, 144, 28);
+}
+
+.color-class-3 {
+    color: rgb(11, 26, 238);
+}
+
+.color-class-4 {
+    color: rgb(220, 150, 46);
+}
 </style>
