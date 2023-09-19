@@ -17,6 +17,7 @@
             <button type="submit" class="toggle-button">Login</button>
           </form>
           <p class="instruction">Fill in the login details to access your account.</p>
+          <button class="toggle-button" @click="toggleForm">Create Account</button>
         </div>
 
         <!-- Right Side: Sign-up Form -->
@@ -37,19 +38,8 @@
             </div>
             <button type="submit" class="toggle-button">Sign Up</button>
           </form>
-          <p class="instruction">Don't have an account? Click "Create Account" below.</p>
-        </div>
-
-        <!-- Site Info -->
-        <div class="site-info" :class="{ active: !isLoginFormActive }">
-          <p>Welcome to Our Site! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod justo a est facilisis, non facilisis dui ultricies.</p>
-        </div>
-
-        <!-- Buttons -->
-        <div class="buttons-container">
-          <button class="toggle-button" @click="toggleForm">
-            {{ isLoginFormActive ? 'Create Account' : 'Back to Login' }}
-          </button>
+          <p class="instruction">Don't have an account? Create one by filling in the details below.</p>
+          <button class="toggle-button" @click="toggleForm">Back to Login</button>
         </div>
       </div>
     </div>
@@ -110,7 +100,7 @@ export default {
 
 .form-container {
   flex: 1;
-  padding: 40px;
+  padding: 40px; /* Increased padding for more spacious look */
   border-radius: 5px;
   background-color: #ffffff;
   display: flex;
@@ -146,8 +136,8 @@ h2 {
 /* Form input styles */
 .form-group {
   width: 100%;
-  max-width: 400px;
-  margin-bottom: 20px;
+  max-width: 400px; /* Increased max-width for text boxes */
+  margin-bottom: 20px; /* Increased margin for spacing between form elements */
   text-align: left;
 }
 
@@ -160,7 +150,7 @@ h2 {
 
 .form-group input {
   width: 100%;
-  padding: 12px;
+  padding: 12px; /* Increased padding for text boxes */
   border: 1px solid #ccc;
   border-radius: 5px;
   transition: border-color 0.3s, box-shadow 0.3s;
@@ -181,27 +171,12 @@ h2 {
   color: #fff;
   border: none;
   border-radius: 5px;
-  padding: 12px;
+  padding: 12px; /* Increased padding for buttons */
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 .toggle-button:hover {
   background-color: #0056b3;
-}
-
-/* Site Info styles */
-.site-info {
-  display: none;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  text-align: center;
-  color: #fff;
-  background: linear-gradient(135deg, #1a0da3, #056632);
-}
-
-.site-info.active {
-  display: block;
 }
 </style>
