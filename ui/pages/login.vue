@@ -31,7 +31,7 @@
             </div>
             <div class="form-group">
               <label for="signup-email">Email</label>
-              <input type="email" id="signup-email" v-model="signupEmail" placeholder="Enter your email" required>
+              <input id="signup-email" v-model="signupEmail" placeholder="Enter your email" required>
             </div>
             <div class="form-group">
               <label for="signup-password">Password</label>
@@ -45,12 +45,13 @@
         </div>
       </div>
     </div>
-    <v-snackbar v-model="snackbar" :color="snackbarColor" :timeout="3000" :dark="$vuetify.theme.dark" :light="!$vuetify.theme.dark">
-  <div style="display: flex; align-items: center;">
-      <span style="font-size: 24px; margin-right: 8px;">❌</span>
-      <span class="text--white">{{ snackText }}</span>
-    </div>
-</v-snackbar>
+    <v-snackbar v-model="snackbar" :color="snackbarColor" :timeout="3000" :dark="$vuetify.theme.dark"
+      :light="!$vuetify.theme.dark">
+      <div style="display: flex; align-items: center;">
+        <span style="font-size: 24px; margin-right: 8px;">❌</span>
+        <span class="text--white">{{ snackText }}</span>
+      </div>
+    </v-snackbar>
 
   </div>
 </template>
@@ -80,8 +81,8 @@ export default {
           },
           body: JSON.stringify(
             {
-              email: this.loginEmail,
-              password: this.loginPassword,
+              loginEmail: this.loginEmail,
+              loginPassword: this.loginPassword,
             }
           ),
         });
@@ -100,7 +101,34 @@ export default {
         console.error('An error occurred:', error);
       }
     },
-    createAccount() {
+    async createAccount() {
+      try {
+        const response = await fetch('http://127.0.0.1:8000/api/signup/', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(
+            {
+              signupName: this.signupName,
+              signupEmail: this.signupEmail,
+              signupPassword: this.signupPassword,
+            }
+          ),
+        });
+
+        if (response.status === 200) {
+          // Successful signup
+          // Redirect or perform actions as needed
+        } else {
+          // Failed login
+          this.snackbar = true;
+          this.snackText = 'Error. Please wait!';
+        }
+      }
+      catch (error) {
+        console.error('An error occurred:', error);
+      }
     },
     toggleForm() {
       this.isLoginFormActive = !this.isLoginFormActive;
