@@ -30,7 +30,8 @@
     <v-app-bar fixed app hide-on-scroll height="64" elevate-on-scroll>
       <v-app-bar-nav-icon class="hidden-md-and-up" @click="drawer = true" />
       <nuxt-link to="/" class="d-flex">
-        <Logo />
+        <v-img height="200" width="200" class="pt-2" contain :src="`logo1.png`"></v-img>
+
       </nuxt-link>
       <v-spacer />
 

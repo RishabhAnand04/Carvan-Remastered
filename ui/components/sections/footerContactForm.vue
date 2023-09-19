@@ -45,10 +45,5 @@ export default {
   },
   components: {
   },
-  methods: {
-    refreshPage() {
-      window.location.reload();
-    },
-  },
 };
 </script>

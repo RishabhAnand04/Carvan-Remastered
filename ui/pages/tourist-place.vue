@@ -117,7 +117,7 @@ export default {
                     text: "Download your ticket instantly upon completing your payment.",
                     callout: "03",
                     buttonText: "Download",
-                    link: "https://cosmofeed.com/vp/6508b0e706f0b7001dcd664d",
+                    link: "http://127.0.0.1:8000/api/generate_ticket/",
                 },
             ],
             testimonials: [
@@ -171,8 +171,8 @@ export default {
             ];
         }
     },
-    methods:{
-        openLink(link){
+    methods: {
+        async openLink(link) {
             window.open(link);
         },
     },
