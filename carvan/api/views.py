@@ -98,8 +98,8 @@ def signup(request):
 @csrf_exempt
 def login_view(request):
     if request.method == 'POST':
-        username = request.data.get('email')
-        password = request.data.get('password')
+        username = request.data.get('loginEmail')
+        password = request.data.get('loginPassword')
         user = authenticate(username=username, password=password)
         if user is not None:
             login(request, user)
