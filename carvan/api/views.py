@@ -179,9 +179,9 @@ class GenerateTicketPDF(View):
     def get(self, request):
         # Example user details (you can fetch these from your database)
         user_details = {
-            "Name": "John Doe",
-            "Event": "Example Concert",
-            "Date": "2023-09-20",
+            "Name": "Anshul",
+            "Event": "Ticket",
+            "Date": "2023-09-19",
             "Ticket ID": "123456789",
         }
 
@@ -196,7 +196,7 @@ class GenerateTicketPDF(View):
         ticket_content = []
 
         # Add a title to the ticket
-        ticket_content.append(Paragraph("Event Ticket", styles['Title']))
+        ticket_content.append(Paragraph("Rock Garden", styles['Title']))
         ticket_content.append(Spacer(1, 12))
 
         # Add user details to the ticket
@@ -212,7 +212,7 @@ class GenerateTicketPDF(View):
             box_size=10,
             border=4,
         )
-        qr.add_data("https://www.example.com/ticket")
+        qr.add_data("https://drive.google.com/file/d/10TfBbFAxPhgVG-xoypnwzMDciSxXdKcD/view?usp=sharing")
         qr.make(fit=True)
 
         qr_image = qr.make_image(fill_color="black", back_color="white")
