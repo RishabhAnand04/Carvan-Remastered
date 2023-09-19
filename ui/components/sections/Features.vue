@@ -46,21 +46,21 @@ export default {
           subtitle: 'Best Productivity',
           text: 'Chandigarh, known for its meticulously planned architecture and lush green gardens, offers tourists a serene blend of urban sophistication and natural beauty.',
           callout: '01',
-          img: 'carousel4.jpg'
+          img: 'Chandigarh image.jpg'
         },
         {
           title: 'Shimla',
           subtitle: 'Special Offers',
           text: 'Shimla, nestled in the Himalayas, is a captivating hill station known for its scenic beauty, colonial architecture, and a serene escape for tourists seeking cool climate and breathtaking vistas.',
           callout: '02',
-          img: 'carousel4.jpg'
+          img: 'shimla 2.jpeg'
         },
         {
           title: 'Manali',
           subtitle: 'Income Flow',
           text: 'Manali, nestled in the Himalayas, is a popular tourist destination known for its stunning landscapes, adventurous activities, and vibrant culture.',
           callout: '03',
-          img: 'carousel4.jpg'
+          img: 'manali 1.jpg'
         },
       ],
     }

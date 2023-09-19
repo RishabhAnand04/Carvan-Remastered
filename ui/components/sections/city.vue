@@ -16,8 +16,8 @@
                 <v-row no-gutters v-for="(place, index) in cityData" :key="place.id"
                     :class="{ 'flex-row-reverse': index % 2 === 1 }">
                     <v-col cols="12" md="6" align-self="center">
-                        <v-hover v-slot="{ hover }">
-                            <v-card :elevation="hover ? 24 : 16" 
+                        <v-hover  v-slot="{ hover }">
+                            <v-card @click="redirectToIndividualPage(place.name)" :elevation="hover ? 24 : 16" 
                                 :class="hover ? 'zoom' : 'notzoom'" class="mx-auto transition-swing">
                                 <v-img max-height="500" :src="place.image_str" :lazy-src="place.image_str">
                                 </v-img>

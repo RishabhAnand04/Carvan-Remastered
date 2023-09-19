@@ -48,17 +48,9 @@ export default {
   data() {
     return {
       brandsLogo: [
-        'logo-12.svg',
-        'logo-17.svg',
-        'logo-25.svg',
-        'logo-26.svg',
-        'logo-20.svg',
-        'logo-11.svg',
-        'logo-1.svg',
-        'logo-22.svg',
-        'logo-23.svg',
-        'logo-16.svg',
-        'logo-8.svg',
+        'chandigarh tourism.png',
+        'himachal tourism.jpeg',
+        'pec_seal.png',
       ],
     }
   },

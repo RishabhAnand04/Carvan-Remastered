@@ -68,7 +68,7 @@
                   </v-list-item-content>
                 </v-list-item>
                 <v-list-item>
-                  <v-btn
+                  <v-btn @click="buyNow"
                     color="primary"
                     large
                     block
@@ -210,6 +210,11 @@ export default {
       ],
     }
   },
+  methods:{
+    buyNow(){
+      window.open('https://cosmofeed.com/vp/6508b0e706f0b7001dcd664d')
+    }
+  }
 }
 </script>
 

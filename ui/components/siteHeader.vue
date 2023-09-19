@@ -87,6 +87,11 @@ export default {
           to: '/gallery',
         },
         {
+          icon: 'mdi-blogger',
+          title: 'Blog',
+          to: '/blog',
+        },
+        {
           icon: 'mdi-contacts',
           title: 'Contact',
           to: '/contact',

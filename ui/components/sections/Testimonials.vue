@@ -74,25 +74,25 @@ export default {
     return {
       testimonials: [
         {
-          avtar: 'person-4.jpg',
+          avtar: 'sahil.png',
           name: 'Sahil Jaura',
           post: 'Student, PEC',
           review: "What an incredible resource! Your website made planning our family vacation a breeze. The comprehensive destination guides and personalized itineraries ensured we didn't miss a thing. Thank you for helping us create unforgettable memories!",
         },
         {
-          avtar: 'person-8.jpg',
+          avtar: 'rishabh.jpeg',
           name: 'Rishabh Anand',
           post: 'SDE-1 Amadeus Labs',
           review: "I'm a seasoned traveler, and I must say, your website is a gem. It's not just about the destinations; it's about the passion and expertise you bring to the table. The local culture insights and adventure recommendations added a whole new layer of excitement to our trips. Truly exceptional!",
         },
         {
-          avtar: 'person-7.jpg',
+          avtar: 'anshul.png',
           name: 'Anshul Banwala',
           post: 'PM India',
           review: "I stumbled upon your website while searching for off-the-beaten-path experiences, and I couldn't be happier. The 'Discover Local Culture' section is a treasure trove of unique activities and hidden gems. Thanks for inspiring me to explore new horizons and embrace the world's diversity!",
         },
         {
-          avtar: 'person-10.jpg',
+          avtar: 'adhiyyan.jpeg',
           name: 'Adhiyyan Kapoolia',
           post: 'STGI Employee',
           review: "Kudos to your team for curating such a diverse range of travel experiences. The 'Adventure of a Lifetime' section was a game-changer for me. From thrilling expeditions to serene nature escapes, your website has it all. I'm hooked and can't wait for my next adventure!",

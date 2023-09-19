@@ -29,6 +29,9 @@
                                             v-text="card.title"></h4>
                                         <p v-text="card.text"></p>
                                     </div>
+                                    <v-btn @click="openLink(card.link)" color="primary ml-3" small>
+                                        {{ card.buttonText }}
+                                    </v-btn>
                                 </v-col>
                                 <v-col v-if="card.callout" cols="2">
                                     <span class="text-h3 grey--text font-weight-bold pr-8" style="opacity: 0.1">{{
@@ -81,10 +84,8 @@
                 </v-carousel>
             </section>
         </template>
-        <iframe
-            :src="currentPlaceData.i_frame"
-            height="600" width="100%" frameborder="0" style="border: 0; display: block" allowfullscreen="true"
-            aria-hidden="false" tabindex="0"></iframe>
+        <iframe :src="currentPlaceData.i_frame" height="600" width="100%" frameborder="0" style="border: 0; display: block"
+            allowfullscreen="true" aria-hidden="false" tabindex="0"></iframe>
 
     </section>
 </template>
@@ -95,22 +96,28 @@ export default {
         return {
             cards: [
                 {
-                    title: "Interactive Virtual Tours",
-                    subtitle: "Professionally developed",
-                    text: "All components and features are developed using the most up-to-date coding practices.",
+                    title: "Buy Early Tickets",
+                    subtitle: "Seamless Payment",
+                    text: "Purchase your tickets to visit this incredible place on our website today!",
                     callout: "01",
+                    buttonText: "Buy Now",
+                    link: "https://cosmofeed.com/vp/6508b0e706f0b7001dcd664d",
                 },
                 {
-                    title: "Fast & optimized",
-                    subtitle: "Performance",
-                    text: "Themes are designed for maximum performance and are semantically structured to maximize SEO.",
+                    title: "Book a Cab",
+                    subtitle: "Travel Facilities",
+                    text: "Book a convenient cab ride to this destination directly from our website.",
                     callout: "02",
+                    buttonText: "Book Now",
+                    link: "https://m.uber.com/go/drop?drop%5B0%5D=%7B%22addressLine1%22%3A%22Le%20Corbusier%20Centre%22%2C%22addressLine2%22%3A%22Sector%2019B%20Old%20Architect%20Building%2C%20Madhya%20Marg%2C%2019B%2C%20Sector%2019%2C%20Chandigarh%22%2C%22id%22%3A%22ChIJ4YJrBBntDzkRbKrpPMxw9U4%22%2C%22source%22%3A%22SEARCH%22%2C%22latitude%22%3A30.7298194%2C%22longitude%22%3A76.7995423%2C%22provider%22%3A%22google_places%22%7D&pickup=%7B%22addressLine1%22%3A%22PEC%20CAMPUS%2C%20CHANDIGARH%22%2C%22addressLine2%22%3A%22QQ8M%2BH98%2C%20Sector%2012%2C%20Chandigarh%22%2C%22id%22%3A%22ChIJ-X5Vz4HyDzkReCsS9d_flyQ%22%2C%22source%22%3A%22SEARCH%22%2C%22latitude%22%3A30.7664116%2C%22longitude%22%3A76.78344609999999%2C%22provider%22%3A%22google_places%22%7D",
                 },
                 {
-                    title: "Built on Vuetify",
-                    subtitle: "Material Design",
-                    text: "Being developed with Vuetify means you have access to all of the framework's available features.",
+                    title: "Download Ticket",
+                    subtitle: "Get Your Ticket",
+                    text: "Download your ticket instantly upon completing your payment.",
                     callout: "03",
+                    buttonText: "Download",
+                    link: "https://cosmofeed.com/vp/6508b0e706f0b7001dcd664d",
                 },
             ],
             testimonials: [
@@ -163,6 +170,11 @@ export default {
                 },
             ];
         }
+    },
+    methods:{
+        openLink(link){
+            window.open(link);
+        },
     },
     head() {
         return {
