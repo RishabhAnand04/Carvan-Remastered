@@ -80,7 +80,7 @@ export default {
           },
           body: JSON.stringify(
             {
-              username: this.loginEmail,
+              email: this.loginEmail,
               password: this.loginPassword,
             }
           ),
