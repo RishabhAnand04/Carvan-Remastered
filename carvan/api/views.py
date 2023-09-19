@@ -22,6 +22,13 @@ from nltk.chat.util import Chat, reflections
 import requests
 from bs4 import BeautifulSoup
 from urllib.parse import quote
+from django.views.decorators.csrf import csrf_exempt
+import os
+import qrcode
+from django.views.decorators.http import require_POST
+from reportlab.pdfgen import canvas
+from django.contrib.auth import get_user_model
+User = get_user_model()
 
 
 # Create your views here.
@@ -88,7 +95,9 @@ def signup(request):
             return JsonResponse({'errors': form.errors}, status=400)
 
 @api_view(['POST'])
+@csrf_exempt
 def login_view(request):
+    print("ansuuuuuuuuuul")
     if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
@@ -150,6 +159,61 @@ def model():
         result.append(place_name)
     
     return result
+
+
+@csrf_exempt
+@api_view(['POST'])
+def generate_qr_code_and_pdf(request):
+    try:
+        user = request.user
+        print(request.user)
+
+        # Create a new user object
+        # user = User.objects.create(name=name, email=email)
+
+        # Generate a unique filename for the PDF
+        pdf_filename = f"user_{user.id}.pdf"
+        pdf_path = os.path.join("media", pdf_filename)
+
+        # Create a QR code containing a link to the PDF
+        qr = qrcode.QRCode(
+            version=1,
+            error_correction=qrcode.constants.ERROR_CORRECT_L,
+            box_size=10,
+            border=4,
+        )
+        qr.add_data(request.build_absolute_uri(pdf_path))
+        qr.make(fit=True)
+
+        # Generate the QR code image
+        qr_img = qr.make_image(fill_color="black", back_color="white")
+
+        # Generate the PDF with user details
+        c = canvas.Canvas(pdf_path)
+        c.drawString(100, 700, f"Name: {name}")
+        c.drawString(100, 680, f"Email: {email}")
+        # Add more details as needed
+        c.save()
+
+        # Return the QR code image URL in the response
+        response_data = {
+            "message": "QR code and PDF generated successfully",
+            "qr_code_url": request.build_absolute_uri(pdf_path),
+        }
+
+        return JsonResponse(response_data)
+
+    except Exception as e:
+        return JsonResponse({"error": str(e)}, status=500)
+
+
+
+
+
+
+
+
+
 
 
 

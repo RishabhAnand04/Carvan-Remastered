@@ -2,10 +2,11 @@
 from django.contrib import admin
 from django.urls import path, include
 from api.views import login_view,signup
+from django.conf.urls.static import static
+from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('api.urls')),
-    path('signup/', signup, name='signup'),
-    path('login/', login_view, name='login'),
 ]
+# urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

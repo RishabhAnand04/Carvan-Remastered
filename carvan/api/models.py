@@ -22,4 +22,6 @@ class Visiting(models.Model):
     highlight = models.CharField(max_length=200)
     family_friendly = models.CharField(max_length=200)
     description = models.CharField(max_length=200)
-
+    details = models.CharField(max_length=500, default="")
+    sub_heading = models.CharField(max_length=200, default="")
+    i_frame = models.CharField(max_length=200, default="")
