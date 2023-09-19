@@ -59,9 +59,31 @@ export default {
     };
   },
   methods: {
-    login() {
-      // Handle login using this.loginEmail and this.loginPassword
-    },
+    async login() {
+    try {
+        console.log("!!!!!!!",this.formData)
+      const response = await fetch('http://127.0.0.1:8000/api/login/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(this.formData),
+      });
+
+      if (response.status === 200) {
+        // Successful login
+        // Redirect or perform actions as needed
+      } else {
+        // Failed login
+        console.error('Login failed');
+      }
+    } 
+    catch (error) {
+      console.error('An error occurred:', error);
+    }
+  },
+
+
     createAccount() {
       // Handle creating an account using this.signupName, this.signupEmail, and this.signupPassword
     },

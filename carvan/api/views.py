@@ -97,11 +97,11 @@ def signup(request):
 @api_view(['POST'])
 @csrf_exempt
 def login_view(request):
-    print("ansuuuuuuuuuul",request.user)
+    print("ansuuuuuuuuuul",request.POST)
     if request.method == 'POST':
         email = request.POST.get('email')
         password = request.POST.get('password')
-        print("!!!!!!!!!!!!!!")
+        print("!!!!!!!!!!!!!!",email,"  ",password)
         user = authenticate(request, email=email, password=password)
         if user is not None:
             login(request, user)
