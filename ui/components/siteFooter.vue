@@ -34,7 +34,7 @@
         ></v-col>
         <v-col class="text--secondary text-center text-md-right">
           {{ new Date().getFullYear() }} ©
-          <nuxt-link class="primary--text" to="/">Carvan</nuxt-link>
+          <nuxt-link class="primary--text" to="/">Carvaan</nuxt-link>
         </v-col>
       </v-row>
     </v-container>

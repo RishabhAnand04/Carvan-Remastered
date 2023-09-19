@@ -12,7 +12,8 @@
             </div>
             <div class="form-group">
               <label for="login-password">Password</label>
-              <input type="password" id="login-password" v-model="loginPassword" placeholder="Enter your password" required>
+              <input type="password" id="login-password" v-model="loginPassword" placeholder="Enter your password"
+                required>
             </div>
             <button type="submit" class="toggle-button">Login</button>
           </form>
@@ -34,7 +35,8 @@
             </div>
             <div class="form-group">
               <label for="signup-password">Password</label>
-              <input type="password" id="signup-password" v-model="signupPassword" placeholder="Enter your password" required>
+              <input type="password" id="signup-password" v-model="signupPassword" placeholder="Enter your password"
+                required>
             </div>
             <button type="submit" class="toggle-button">Sign Up</button>
           </form>
@@ -43,6 +45,13 @@
         </div>
       </div>
     </div>
+    <v-snackbar v-model="snackbar" :color="snackbarColor" :timeout="3000" :dark="$vuetify.theme.dark" :light="!$vuetify.theme.dark">
+  <div style="display: flex; align-items: center;">
+      <span style="font-size: 24px; margin-right: 8px;">❌</span>
+      <span class="text--white">{{ snackText }}</span>
+    </div>
+</v-snackbar>
+
   </div>
 </template>
 
@@ -50,6 +59,9 @@
 export default {
   data() {
     return {
+      snackText: '',
+      snackbar: false,
+      snackbarColor: "white darken-2",
       isLoginFormActive: true,
       loginEmail: "",
       loginPassword: "",
@@ -60,32 +72,35 @@ export default {
   },
   methods: {
     async login() {
-    try {
-        console.log("!!!!!!!",this.formData)
-      const response = await fetch('http://127.0.0.1:8000/api/login/', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(this.formData),
-      });
+      try {
+        const response = await fetch('http://127.0.0.1:8000/api/login/', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(
+            {
+              username: this.loginEmail,
+              password: this.loginPassword,
+            }
+          ),
+        });
 
-      if (response.status === 200) {
-        // Successful login
-        // Redirect or perform actions as needed
-      } else {
-        // Failed login
-        console.error('Login failed');
+        if (response.status === 200) {
+          // Successful login
+          // Redirect or perform actions as needed
+        } else {
+          // Failed login
+          this.snackbar = true;
+          this.snackText = 'Error. Please provide correct credentials';
+          console.error('Login failed');
+        }
       }
-    } 
-    catch (error) {
-      console.error('An error occurred:', error);
-    }
-  },
-
-
+      catch (error) {
+        console.error('An error occurred:', error);
+      }
+    },
     createAccount() {
-      // Handle creating an account using this.signupName, this.signupEmail, and this.signupPassword
     },
     toggleForm() {
       this.isLoginFormActive = !this.isLoginFormActive;
@@ -122,7 +137,8 @@ export default {
 
 .form-container {
   flex: 1;
-  padding: 40px; /* Increased padding for more spacious look */
+  padding: 40px;
+  /* Increased padding for more spacious look */
   border-radius: 5px;
   background-color: #ffffff;
   display: flex;
@@ -158,8 +174,10 @@ h2 {
 /* Form input styles */
 .form-group {
   width: 100%;
-  max-width: 400px; /* Increased max-width for text boxes */
-  margin-bottom: 20px; /* Increased margin for spacing between form elements */
+  max-width: 400px;
+  /* Increased max-width for text boxes */
+  margin-bottom: 20px;
+  /* Increased margin for spacing between form elements */
   text-align: left;
 }
 
@@ -172,7 +190,8 @@ h2 {
 
 .form-group input {
   width: 100%;
-  padding: 12px; /* Increased padding for text boxes */
+  padding: 12px;
+  /* Increased padding for text boxes */
   border: 1px solid #ccc;
   border-radius: 5px;
   transition: border-color 0.3s, box-shadow 0.3s;
@@ -193,7 +212,8 @@ h2 {
   color: #fff;
   border: none;
   border-radius: 5px;
-  padding: 12px; /* Increased padding for buttons */
+  padding: 12px;
+  /* Increased padding for buttons */
   cursor: pointer;
   transition: background-color 0.3s;
 }

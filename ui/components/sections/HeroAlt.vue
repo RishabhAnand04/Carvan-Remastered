@@ -23,7 +23,7 @@
               {{ item.subHeading }}
             </h2>
 
-            <p class="my-2 title">
+            <p class="my-2 title d-flex justify-center">
               {{ item.description }}
             </p>
           </v-col>

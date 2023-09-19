@@ -42,10 +42,10 @@
                   <v-list-item-content>
                     <v-list-item-title>EMAIL</v-list-item-title>
                     <v-list-item-subtitle
-                      >sahiljaura@carvan.com</v-list-item-subtitle
+                      >sahiljaura@carvaan.com</v-list-item-subtitle
                     >
                     <v-list-item-subtitle
-                      >rishabhanand@carvan.com</v-list-item-subtitle
+                      >rishabhanand@carvaan.com</v-list-item-subtitle
                     >
                   </v-list-item-content>
                 </v-list-item>

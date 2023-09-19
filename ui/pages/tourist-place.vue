@@ -29,7 +29,10 @@
                                             v-text="card.title"></h4>
                                         <p v-text="card.text"></p>
                                     </div>
-                                    <v-btn @click="openLink(card.link)" color="primary ml-3" small>
+                                    <v-btn v-if="card.buttonText!=='Download'" @click="openLink(card.link)" color="primary ml-3" small>
+                                        {{ card.buttonText }}
+                                    </v-btn>
+                                    <v-btn v-if="card.buttonText==='Download'" :disabled="btnFlag" @click="openLink(card.link)" color="primary ml-3" small>
                                         {{ card.buttonText }}
                                     </v-btn>
                                 </v-col>
@@ -94,6 +97,7 @@
 export default {
     data() {
         return {
+            btnFlag: true,
             cards: [
                 {
                     title: "Buy Early Tickets",
@@ -173,6 +177,9 @@ export default {
     },
     methods: {
         async openLink(link) {
+            if(link==='https://cosmofeed.com/vp/6508b0e706f0b7001dcd664d'){
+                this.btnFlag=false;
+            }
             window.open(link);
         },
     },
